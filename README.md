@@ -3,7 +3,7 @@
   <h3>Cybersecurity Researcher & AI Security Developer</h3>
   <p><i>Exploring how systems fail, how to secure them, and where artificial intelligence fits into the picture.</i></p>
 
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jatin-jalpesh-shah-6961842bb/)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jatinjalpeshshah/)
   [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:224jatin2006@gmail.com)
 </div>
 
@@ -62,11 +62,10 @@ I build and test things using a mix of security tools and software development f
 ---
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=GodJatin&theme=dark&hide_border=false&include_all_commits=true&count_private=true" alt="Jatin Jalpesh Shah GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=GodJatin&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=jatinjalpeshshah&theme=dark&hide_border=false&include_all_commits=true&count_private=true" alt="Jatin Jalpesh Shah GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jatinjalpeshshah&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact" alt="Top Languages" />
 </div>
 
-<br/>
-<div align="center">
-  <img src="https://visitcount.itsvg.in/api?id=GodJatin&icon=0&color=0" alt="Profile Views" />
-</div>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=jatinjalpeshshah&label=Profile%20Views&color=0e75b6&style=flat" />
+</p>
