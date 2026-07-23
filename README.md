@@ -213,9 +213,6 @@ A precise timeline of my professional evolution, tracking my journey from core a
 Real-time telemetry of my open-source engineering ecosystem.
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=jatinjalpeshshah&show_icons=true&theme=github_dark&hide_border=true" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jatinjalpeshshah&layout=compact&theme=github_dark&hide_border=true" alt="Top Languages" />
-  <br><br>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=jatinjalpeshshah&theme=dark" alt="GitHub Streak" />
   <br><br>
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=jatinjalpeshshah&theme=github-dark" alt="GitHub Activity Graph" />
