@@ -213,8 +213,8 @@ A precise timeline of my professional evolution, tracking my journey from core a
 Real-time telemetry of my open-source engineering ecosystem.
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=jatinjalpeshshah&show_icons=true&theme=dark" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jatinjalpeshshah&layout=compact&theme=dark" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=jatinjalpeshshah&show_icons=true&theme=github_dark&hide_border=true" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jatinjalpeshshah&layout=compact&theme=github_dark&hide_border=true" alt="Top Languages" />
   <br><br>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=jatinjalpeshshah&theme=dark" alt="GitHub Streak" />
   <br><br>
@@ -289,7 +289,7 @@ Open to:
 <div align="center">
   <br>
   <b>
-    <a href="https://jatinjalpeshshah.github.io">Portfolio</a> &nbsp;•&nbsp;
+    <a href="https://jatin-jalpesh-shah-portfolio.vercel.app/">Portfolio</a> &nbsp;•&nbsp;
     <a href="https://github.com/jatinjalpeshshah">GitHub</a> &nbsp;•&nbsp;
     <a href="https://www.linkedin.com/in/jatinjalpeshshah/">LinkedIn</a> &nbsp;•&nbsp;
     <a href="https://ijsrst.com/IJSRST2613948">Research Publication</a> &nbsp;•&nbsp;
@@ -310,5 +310,4 @@ Open to:
   <h3>Jatin Jalpesh Shah</h3>
   <p><b>Cybersecurity Engineer • AI Security Researcher</b></p>
   <p>Research • Security Engineering • Artificial Intelligence</p>
-  <p><i>Built using the Vanguard OS Design System</i></p>
 </div>
