@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540" class="font-sans">
+  <defs>
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .a-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+      .grid-move { animation: gridPan 20s linear infinite; }
+      @keyframes gridPan { from { transform: translateX(0); } to { transform: translateX(-40px); } }
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.5" opacity="0.3" />
+    </pattern>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-grad)" />
+  <g class="grid-move">
+    <rect x="0" y="0" width="1040" height="100%" fill="url(#grid)" />
+  </g>
+
+  <!-- Header -->
+  <g transform="translate(30, 40)">
+    <text x="0" y="0" font-size="10" font-weight="700" fill="#94A3B8" letter-spacing="1">TECHNICAL CAPABILITY MATRIX</text>
+    <text x="210" y="0" font-size="10" font-weight="700" fill="#38BDF8">v1.0</text>
+    
+    <!-- Status Indicator -->
+    <circle cx="250" cy="-3" r="3" fill="#10B981" class="a-pulse" />
+    <text x="258" y="0" font-size="10" font-weight="700" fill="#10B981">ACTIVE</text>
+    
+    <text x="310" y="0" font-size="10" fill="#64748B">// Engineering Competencies</text>
+  </g>
+
+  <!-- Connecting Ecosystem Curves -->
+  <g fill="none" stroke="#1E293B" stroke-width="1.5" opacity="0.6">
+    <path d="M 362 160 C 420 160, 440 122, 490 122" />
+    <path d="M 362 160 C 420 160, 440 222, 490 222" />
+    <path d="M 362 290 C 420 290, 440 322, 490 322" />
+    <path d="M 250 95 C 250 50, 420 80, 490 90" />
+    <path d="M 250 355 C 250 400, 420 370, 490 350" />
+  </g>
+
+  <!-- Connecting Nodes to Panels -->
+  <g fill="#38BDF8">
+    <circle cx="490" cy="122" r="2.5" />
+    <circle cx="490" cy="222" r="2.5" />
+    <circle cx="490" cy="322" r="2.5" />
+    <circle cx="490" cy="90" r="2.5" />
+    <circle cx="490" cy="350" r="2.5" />
+  </g>
+
+  <!-- Hub and Spoke Core -->
+  <!-- Spokes -->
+  <g stroke="#1E293B" stroke-width="1.5" fill="none">
+    <line x1="250" y1="225" x2="250" y2="95" />
+    <line x1="250" y1="225" x2="362" y2="160" />
+    <line x1="250" y1="225" x2="362" y2="290" />
+    <line x1="250" y1="225" x2="250" y2="355" />
+    <line x1="250" y1="225" x2="138" y2="290" />
+    <line x1="250" y1="225" x2="138" y2="160" />
+  </g>
+
+  <!-- Data Pulses Outgoing -->
+  <g fill="#38BDF8">
+    <circle r="2"><animateMotion dur="3s" begin="0s" repeatCount="indefinite" path="M250,225 L250,95" /></circle>
+    <circle r="2"><animateMotion dur="2.8s" begin="0.5s" repeatCount="indefinite" path="M250,225 L362,160" /></circle>
+    <circle r="2"><animateMotion dur="3.2s" begin="1s" repeatCount="indefinite" path="M250,225 L362,290" /></circle>
+    <circle r="2"><animateMotion dur="2.5s" begin="0.3s" repeatCount="indefinite" path="M250,225 L250,355" /></circle>
+    <circle r="2"><animateMotion dur="3.4s" begin="1.5s" repeatCount="indefinite" path="M250,225 L138,290" /></circle>
+    <circle r="2"><animateMotion dur="2.9s" begin="0.8s" repeatCount="indefinite" path="M250,225 L138,160" /></circle>
+  </g>
+
+  <!-- Data Pulses Incoming -->
+  <g fill="#10B981">
+    <circle r="2"><animateMotion dur="2.5s" begin="1s" repeatCount="indefinite" path="M250,95 L250,225" /></circle>
+    <circle r="2"><animateMotion dur="3.1s" begin="0s" repeatCount="indefinite" path="M362,160 L250,225" /></circle>
+    <circle r="2"><animateMotion dur="2.9s" begin="1.5s" repeatCount="indefinite" path="M362,290 L250,225" /></circle>
+    <circle r="2"><animateMotion dur="3.5s" begin="0.5s" repeatCount="indefinite" path="M250,355 L250,225" /></circle>
+    <circle r="2"><animateMotion dur="2.7s" begin="0.2s" repeatCount="indefinite" path="M138,290 L250,225" /></circle>
+    <circle r="2"><animateMotion dur="3.2s" begin="1.1s" repeatCount="indefinite" path="M138,160 L250,225" /></circle>
+  </g>
+
+  <!-- Outer Nodes -->
+  <!-- N1: Network Security -->
+  <circle cx="250" cy="95" r="32" fill="#0F172A" stroke="#1E293B" stroke-width="1.5">
+    <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="4s" begin="0s" repeatCount="indefinite" />
+  </circle>
+  <text x="250" y="92" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Network</text>
+  <text x="250" y="104" font-size="9" fill="#64748B" text-anchor="middle">Security</text>
+
+  <!-- N2: Threat Intelligence -->
+  <circle cx="362" cy="160" r="32" fill="#0F172A" stroke="#1E293B" stroke-width="1.5">
+    <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="4s" begin="0.6s" repeatCount="indefinite" />
+  </circle>
+  <text x="362" y="157" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Threat</text>
+  <text x="362" y="169" font-size="9" fill="#64748B" text-anchor="middle">Intelligence</text>
+
+  <!-- N3: Detection Engineering -->
+  <circle cx="362" cy="290" r="32" fill="#0F172A" stroke="#1E293B" stroke-width="1.5">
+    <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="4s" begin="1.2s" repeatCount="indefinite" />
+  </circle>
+  <text x="362" y="287" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Detection</text>
+  <text x="362" y="299" font-size="9" fill="#64748B" text-anchor="middle">Engineering</text>
+
+  <!-- N4: AI Security -->
+  <circle cx="250" cy="355" r="32" fill="#0F172A" stroke="#1E293B" stroke-width="1.5">
+    <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="4s" begin="1.8s" repeatCount="indefinite" />
+  </circle>
+  <text x="250" y="352" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">AI</text>
+  <text x="250" y="364" font-size="9" fill="#64748B" text-anchor="middle">Security</text>
+
+  <!-- N5: Desktop Platforms -->
+  <circle cx="138" cy="290" r="32" fill="#0F172A" stroke="#1E293B" stroke-width="1.5">
+    <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="4s" begin="2.4s" repeatCount="indefinite" />
+  </circle>
+  <text x="138" y="287" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Desktop</text>
+  <text x="138" y="299" font-size="9" fill="#64748B" text-anchor="middle">Platforms</text>
+
+  <!-- N6: Web Development -->
+  <circle cx="138" cy="160" r="32" fill="#0F172A" stroke="#1E293B" stroke-width="1.5">
+    <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="4s" begin="3.0s" repeatCount="indefinite" />
+  </circle>
+  <text x="138" y="157" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Web</text>
+  <text x="138" y="169" font-size="9" fill="#64748B" text-anchor="middle">Development</text>
+
+  <!-- Center Node -->
+  <circle cx="250" cy="225" r="50" fill="none" stroke="#38BDF8" stroke-dasharray="2 6" opacity="0.5">
+    <animateTransform attributeName="transform" type="rotate" from="0 250 225" to="360 250 225" dur="20s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="250" cy="225" r="55" fill="none" stroke="#1E293B" stroke-dasharray="10 10">
+    <animateTransform attributeName="transform" type="rotate" from="360 250 225" to="0 250 225" dur="30s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="250" cy="225" r="42" fill="#020617" stroke="#38BDF8" stroke-width="1.5" />
+  <text x="250" y="222" font-size="10" font-weight="700" fill="#F8FAFC" text-anchor="middle">CYBERSECURITY</text>
+  <text x="250" y="235" font-size="9" font-weight="600" fill="#94A3B8" text-anchor="middle">ENGINEERING</text>
+
+  <!-- Capability Panels (Right Side) -->
+  <g>
+    <!-- Row 1 -->
+    <g transform="translate(490, 80)">
+      <rect width="220" height="85" rx="6" fill="#0F172A" stroke="#1E293B" />
+      <text x="15" y="20" font-size="9" font-weight="700" fill="#94A3B8" letter-spacing="0.5">SECURITY ENGINEERING</text>
+      <rect x="15" y="28" width="15" height="2" fill="#38BDF8" />
+      <text x="15" y="47" font-size="11" font-weight="600" fill="#F8FAFC">Threat Intelligence</text>
+      <text x="15" y="62" font-size="11" font-weight="600" fill="#F8FAFC">Detection Engineering</text>
+      <text x="15" y="77" font-size="11" font-weight="600" fill="#F8FAFC">Digital Forensics</text>
+    </g>
+    <g transform="translate(730, 80)">
+      <rect width="220" height="85" rx="6" fill="#0F172A" stroke="#1E293B" />
+      <text x="15" y="20" font-size="9" font-weight="700" fill="#94A3B8" letter-spacing="0.5">AI &amp; RESEARCH</text>
+      <rect x="15" y="28" width="15" height="2" fill="#10B981" />
+      <text x="15" y="47" font-size="11" font-weight="600" fill="#F8FAFC">Machine Learning</text>
+      <text x="15" y="62" font-size="11" font-weight="600" fill="#F8FAFC">Industry 4.0 Defense</text>
+      <text x="15" y="77" font-size="11" font-weight="600" fill="#F8FAFC">Conceptual Architecture</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(490, 180)">
+      <rect width="220" height="85" rx="6" fill="#0F172A" stroke="#1E293B" />
+      <text x="15" y="20" font-size="9" font-weight="700" fill="#94A3B8" letter-spacing="0.5">PROGRAMMING</text>
+      <rect x="15" y="28" width="15" height="2" fill="#38BDF8" />
+      <text x="15" y="47" font-size="11" font-weight="600" fill="#F8FAFC">Python</text>
+      <text x="15" y="62" font-size="11" font-weight="600" fill="#F8FAFC">TypeScript</text>
+      <text x="15" y="77" font-size="11" font-weight="600" fill="#F8FAFC">JavaScript / Java</text>
+    </g>
+    <g transform="translate(730, 180)">
+      <rect width="220" height="85" rx="6" fill="#0F172A" stroke="#1E293B" />
+      <text x="15" y="20" font-size="9" font-weight="700" fill="#94A3B8" letter-spacing="0.5">BACKEND ENGINEERING</text>
+      <rect x="15" y="28" width="15" height="2" fill="#38BDF8" />
+      <text x="15" y="47" font-size="11" font-weight="600" fill="#F8FAFC">FastAPI &amp; REST APIs</text>
+      <text x="15" y="62" font-size="11" font-weight="600" fill="#F8FAFC">SQLite &amp; Relational DBs</text>
+      <text x="15" y="77" font-size="11" font-weight="600" fill="#F8FAFC">Node.js Ecosystem</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(490, 280)">
+      <rect width="220" height="85" rx="6" fill="#0F172A" stroke="#1E293B" />
+      <text x="15" y="20" font-size="9" font-weight="700" fill="#94A3B8" letter-spacing="0.5">DESKTOP PLATFORMS</text>
+      <rect x="15" y="28" width="15" height="2" fill="#38BDF8" />
+      <text x="15" y="47" font-size="11" font-weight="600" fill="#F8FAFC">Electron Framework</text>
+      <text x="15" y="62" font-size="11" font-weight="600" fill="#F8FAFC">High-Performance UIs</text>
+      <text x="15" y="77" font-size="11" font-weight="600" fill="#F8FAFC">Cross-Platform Apps</text>
+    </g>
+    <g transform="translate(730, 280)">
+      <rect width="220" height="85" rx="6" fill="#0F172A" stroke="#1E293B" />
+      <text x="15" y="20" font-size="9" font-weight="700" fill="#94A3B8" letter-spacing="0.5">FRONTEND &amp; WEB</text>
+      <rect x="15" y="28" width="15" height="2" fill="#38BDF8" />
+      <text x="15" y="47" font-size="11" font-weight="600" fill="#F8FAFC">Next.js Framework</text>
+      <text x="15" y="62" font-size="11" font-weight="600" fill="#F8FAFC">Tailwind CSS</text>
+      <text x="15" y="77" font-size="11" font-weight="600" fill="#F8FAFC">React Architecture</text>
+    </g>
+  </g>
+
+  <!-- Experience Classification Map (Bottom Left) -->
+  <g transform="translate(30, 410)">
+    <rect width="600" height="100" rx="6" fill="#0F172A" stroke="#1E293B" />
+    <text x="25" y="25" font-size="10" font-weight="700" fill="#64748B" letter-spacing="1">EXPERIENCE CLASSIFICATION</text>
+    <rect x="25" y="38" width="550" height="1" fill="#1E293B" />
+
+    <text x="25" y="58" font-size="9" font-weight="700" fill="#94A3B8">PRIMARY STACK</text>
+    <text x="25" y="74" font-size="11" font-weight="600" fill="#F8FAFC">Python</text>
+    <text x="25" y="90" font-size="11" font-weight="600" fill="#F8FAFC">TypeScript</text>
+
+    <text x="165" y="58" font-size="9" font-weight="700" fill="#94A3B8">SUPPORTING STACK</text>
+    <text x="165" y="74" font-size="11" font-weight="600" fill="#F8FAFC">FastAPI</text>
+    <text x="165" y="90" font-size="11" font-weight="600" fill="#F8FAFC">Next.js / React</text>
+
+    <text x="315" y="58" font-size="9" font-weight="700" fill="#94A3B8">RESEARCH TOOLS</text>
+    <text x="315" y="74" font-size="11" font-weight="600" fill="#F8FAFC">Scapy</text>
+    <text x="315" y="90" font-size="11" font-weight="600" fill="#F8FAFC">Wireshark &amp; Nmap</text>
+
+    <text x="465" y="58" font-size="9" font-weight="700" fill="#94A3B8">PLATFORMS</text>
+    <text x="465" y="74" font-size="11" font-weight="600" fill="#F8FAFC">Electron</text>
+    <text x="465" y="90" font-size="11" font-weight="600" fill="#F8FAFC">Linux Ecosystem</text>
+  </g>
+
+  <!-- Engineering Domains (Bottom Right) -->
+  <g transform="translate(650, 410)">
+    <rect width="320" height="100" rx="6" fill="#0F172A" stroke="#1E293B" />
+    <text x="20" y="25" font-size="10" font-weight="700" fill="#64748B" letter-spacing="1">ENGINEERING DOMAINS</text>
+    <rect x="20" y="38" width="280" height="1" fill="#1E293B" />
+
+    <!-- Row 1 -->
+    <rect x="20" y="50" width="65" height="20" rx="4" fill="#020617" stroke="#1E293B" />
+    <text x="52.5" y="63" font-size="9" font-weight="600" fill="#38BDF8" text-anchor="middle">Security</text>
+
+    <rect x="95" y="50" width="75" height="20" rx="4" fill="#020617" stroke="#1E293B" />
+    <text x="132.5" y="63" font-size="9" font-weight="600" fill="#38BDF8" text-anchor="middle">Networking</text>
+
+    <rect x="180" y="50" width="65" height="20" rx="4" fill="#020617" stroke="#1E293B" />
+    <text x="212.5" y="63" font-size="9" font-weight="600" fill="#10B981" text-anchor="middle">Research</text>
+
+    <rect x="255" y="50" width="40" height="20" rx="4" fill="#020617" stroke="#1E293B" />
+    <text x="275" y="63" font-size="9" font-weight="600" fill="#38BDF8" text-anchor="middle">AI</text>
+
+    <!-- Row 2 -->
+    <rect x="20" y="75" width="65" height="20" rx="4" fill="#020617" stroke="#1E293B" />
+    <text x="52.5" y="88" font-size="9" font-weight="600" fill="#38BDF8" text-anchor="middle">Desktop</text>
+
+    <rect x="95" y="75" width="65" height="20" rx="4" fill="#020617" stroke="#1E293B" />
+    <text x="127.5" y="88" font-size="9" font-weight="600" fill="#38BDF8" text-anchor="middle">Backend</text>
+
+    <rect x="170" y="75" width="65" height="20" rx="4" fill="#020617" stroke="#1E293B" />
+    <text x="202.5" y="88" font-size="9" font-weight="600" fill="#38BDF8" text-anchor="middle">Frontend</text>
+  </g>
+</svg>

@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540" class="font-sans">
+  <defs>
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .a-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+      .grid-move { animation: gridPan 30s linear infinite; }
+      @keyframes gridPan { from { transform: translateX(0); } to { transform: translateX(-40px); } }
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.5" opacity="0.4" />
+    </pattern>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-grad)" />
+  <g class="grid-move">
+    <rect x="0" y="0" width="1040" height="100%" fill="url(#grid)" />
+  </g>
+
+  <!-- Header -->
+  <g transform="translate(30, 40)">
+    <text x="0" y="0" font-size="10" font-weight="700" fill="#94A3B8" letter-spacing="1">ENGINEERING ECOSYSTEM</text>
+    <text x="180" y="0" font-size="10" font-weight="700" fill="#38BDF8">v1.0</text>
+    <circle cx="220" cy="-3" r="3" fill="#10B981" class="a-pulse" />
+    <text x="228" y="0" font-size="10" font-weight="700" fill="#10B981">ACTIVE</text>
+    <text x="280" y="0" font-size="10" fill="#64748B">// Project Architecture</text>
+  </g>
+
+  <!-- Slow Radar Background for Architecture Map -->
+  <circle cx="240" cy="210" r="160" fill="none" stroke="#1E293B" stroke-dasharray="2 8" opacity="0.4">
+    <animateTransform attributeName="transform" type="rotate" from="0 240 210" to="360 240 210" dur="50s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="240" cy="210" r="100" fill="none" stroke="#1E293B" stroke-dasharray="10 10" opacity="0.3">
+    <animateTransform attributeName="transform" type="rotate" from="360 240 210" to="0 240 210" dur="40s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Connection Lines (Primary) -->
+  <g fill="none" stroke="#1E293B" stroke-width="1.5">
+    <!-- N0 to CyberSentinel -->
+    <path d="M240,190 L240,116" />
+    <!-- N0 to Research -->
+    <path d="M310,210 L330,210 L330,153 L350,153" />
+    <!-- N0 to PhishGuard -->
+    <path d="M310,210 L330,210 L330,263 L350,263" />
+    <!-- N0 to Portfolio -->
+    <path d="M240,230 L240,300" />
+    <!-- N0 to Get2Gather -->
+    <path d="M170,210 L130,210" />
+  </g>
+
+  <!-- Connection Lines (Secondary / Conceptual) -->
+  <g fill="none" stroke="#1E293B" stroke-width="1" stroke-dasharray="3 3">
+    <!-- CyberSentinel to Research -->
+    <path d="M300,98 C 350,98 405,110 405,135" />
+    <!-- Research to PhishGuard -->
+    <path d="M405,171 L405,245" />
+    <!-- Portfolio to Personal Brand Flow -->
+    <path d="M180,318 L35,318" />
+    <!-- Get2Gather to Backend Flow -->
+    <path d="M80,192 L80,90" />
+  </g>
+
+  <!-- Animated Data Flow on Primary Connections -->
+  <g fill="#38BDF8">
+    <circle r="1.5"><animateMotion dur="3s" repeatCount="indefinite" path="M240,190 L240,116" /></circle>
+    <circle r="1.5"><animateMotion dur="3.5s" repeatCount="indefinite" path="M310,210 L330,210 L330,153 L350,153" /></circle>
+    <circle r="1.5"><animateMotion dur="3.2s" repeatCount="indefinite" path="M310,210 L330,210 L330,263 L350,263" /></circle>
+    <circle r="1.5"><animateMotion dur="2.8s" repeatCount="indefinite" path="M240,230 L240,300" /></circle>
+    <circle r="1.5"><animateMotion dur="2.5s" repeatCount="indefinite" path="M170,210 L130,210" /></circle>
+  </g>
+  
+  <!-- Animated Data Flow on Secondary Connections -->
+  <g fill="#10B981">
+    <circle r="1.5"><animateMotion dur="4s" repeatCount="indefinite" path="M300,98 C 350,98 405,110 405,135" /></circle>
+    <circle r="1.5"><animateMotion dur="3s" repeatCount="indefinite" path="M405,171 L405,245" /></circle>
+  </g>
+
+  <!-- Secondary Path Badges and Nodes -->
+  <rect x="312" y="93" width="85" height="14" rx="2" fill="#020617" stroke="#1E293B" />
+  <text x="354.5" y="103" font-size="7" font-weight="600" fill="#94A3B8" text-anchor="middle">Threat Intelligence</text>
+
+  <rect x="375" y="201" width="60" height="14" rx="2" fill="#020617" stroke="#1E293B" />
+  <text x="405" y="211" font-size="7" font-weight="600" fill="#94A3B8" text-anchor="middle">AI Security</text>
+
+  <!-- Portfolio Secondary Nodes -->
+  <circle cx="140" cy="318" r="2" fill="#94A3B8" />
+  <text x="140" y="328" font-size="7" fill="#94A3B8" text-anchor="middle">Docs</text>
+  <circle cx="105" cy="318" r="2" fill="#94A3B8" />
+  <text x="105" y="328" font-size="7" fill="#94A3B8" text-anchor="middle">Presentation</text>
+  <circle cx="70" cy="318" r="2" fill="#94A3B8" />
+  <text x="70" y="328" font-size="7" fill="#94A3B8" text-anchor="middle">GitHub</text>
+  <circle cx="35" cy="318" r="2" fill="#94A3B8" />
+  <text x="35" y="328" font-size="7" fill="#94A3B8" text-anchor="middle">Brand</text>
+
+  <!-- Get2Gather Secondary Nodes -->
+  <circle cx="80" cy="160" r="2" fill="#94A3B8" />
+  <text x="85" y="162" font-size="7" fill="#94A3B8">Full Stack</text>
+  <circle cx="80" cy="125" r="2" fill="#94A3B8" />
+  <text x="85" y="127" font-size="7" fill="#94A3B8">Frontend</text>
+  <circle cx="80" cy="90" r="2" fill="#94A3B8" />
+  <text x="85" y="92" font-size="7" fill="#94A3B8">Backend</text>
+
+  <!-- Architecture Nodes -->
+  <!-- N0: Center Node -->
+  <rect x="170" y="190" width="140" height="40" rx="4" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5" />
+  <text x="240" y="206" font-size="9" font-weight="700" fill="#F8FAFC" text-anchor="middle">JATIN JALPESH SHAH</text>
+  <text x="240" y="219" font-size="8" font-weight="600" fill="#38BDF8" text-anchor="middle">Security Engineering Core</text>
+
+  <!-- N1: CyberSentinel -->
+  <rect x="180" y="80" width="120" height="36" rx="4" fill="#020617" stroke="#1E293B">
+    <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="4s" begin="0s" repeatCount="indefinite" />
+  </rect>
+  <text x="240" y="98" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">CyberSentinel AI</text>
+  <text x="240" y="108" font-size="7" fill="#64748B" text-anchor="middle">Desktop SIEM Platform</text>
+
+  <!-- N2: Research -->
+  <rect x="350" y="135" width="110" height="36" rx="4" fill="#020617" stroke="#1E293B">
+    <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="4s" begin="0.8s" repeatCount="indefinite" />
+  </rect>
+  <text x="405" y="153" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Research Module</text>
+  <text x="405" y="163" font-size="7" fill="#64748B" text-anchor="middle">Academic Publications</text>
+
+  <!-- N3: PhishGuard -->
+  <rect x="350" y="245" width="110" height="36" rx="4" fill="#020617" stroke="#1E293B">
+    <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="4s" begin="1.6s" repeatCount="indefinite" />
+  </rect>
+  <text x="405" y="263" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">PhishGuard System</text>
+  <text x="405" y="273" font-size="7" fill="#64748B" text-anchor="middle">URL Threat Intelligence</text>
+
+  <!-- N4: Portfolio -->
+  <rect x="180" y="300" width="120" height="36" rx="4" fill="#020617" stroke="#1E293B">
+    <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="4s" begin="2.4s" repeatCount="indefinite" />
+  </rect>
+  <text x="240" y="318" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Security Portfolio</text>
+  <text x="240" y="328" font-size="7" fill="#64748B" text-anchor="middle">Engineering Showcase</text>
+
+  <!-- N5: Get2Gather -->
+  <rect x="30" y="192" width="100" height="36" rx="4" fill="#020617" stroke="#1E293B">
+    <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="4s" begin="3.2s" repeatCount="indefinite" />
+  </rect>
+  <text x="80" y="210" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Get2Gather</text>
+  <text x="80" y="220" font-size="7" fill="#64748B" text-anchor="middle">Web Platform</text>
+
+  <!-- Project Summary Panels (Right Side) -->
+  <g transform="translate(500, 70)">
+    <!-- CyberSentinel AI -->
+    <g transform="translate(0, 0)">
+      <rect width="225" height="95" rx="6" fill="#0F172A" stroke="#1E293B" />
+      <text x="15" y="20" font-size="11" font-weight="700" fill="#38BDF8">CyberSentinel AI</text>
+      <text x="15" y="32" font-size="8" font-weight="600" fill="#94A3B8">Enterprise Desktop SIEM</text>
+      <rect x="15" y="38" width="195" height="1" fill="#1E293B" />
+      <text x="15" y="52" font-size="9" fill="#F8FAFC">AI-powered threat analysis platform.</text>
+      <text x="15" y="68" font-size="8" fill="#64748B">Status:</text>
+      <text x="45" y="68" font-size="8" font-weight="600" fill="#10B981">Active Development</text>
+      <text x="15" y="82" font-size="8" fill="#64748B">Stack:</text>
+      <text x="45" y="82" font-size="8" fill="#F8FAFC">Electron, FastAPI, Scapy, Python</text>
+    </g>
+    <!-- Research -->
+    <g transform="translate(0, 110)">
+      <rect width="225" height="95" rx="6" fill="#0F172A" stroke="#1E293B" />
+      <text x="15" y="20" font-size="11" font-weight="700" fill="#38BDF8">Industry 4.0 Research</text>
+      <text x="15" y="32" font-size="8" font-weight="600" fill="#94A3B8">Academic Publication</text>
+      <rect x="15" y="38" width="195" height="1" fill="#1E293B" />
+      <text x="15" y="52" font-size="9" fill="#F8FAFC">AI-based solutions for ICS/SCADA systems.</text>
+      <text x="15" y="68" font-size="8" fill="#64748B">Status:</text>
+      <text x="45" y="68" font-size="8" font-weight="600" fill="#10B981">Published (IJSRST)</text>
+      <text x="15" y="82" font-size="8" fill="#64748B">Stack:</text>
+      <text x="45" y="82" font-size="8" fill="#F8FAFC">Threat Analysis, AI Security</text>
+    </g>
+    <!-- Get2Gather -->
+    <g transform="translate(0, 220)">
+      <rect width="225" height="95" rx="6" fill="#0F172A" stroke="#1E293B" />
+      <text x="15" y="20" font-size="11" font-weight="700" fill="#38BDF8">Get2Gather</text>
+      <text x="15" y="32" font-size="8" font-weight="600" fill="#94A3B8">Event Management Platform</text>
+      <rect x="15" y="38" width="195" height="1" fill="#1E293B" />
+      <text x="15" y="52" font-size="9" fill="#F8FAFC">Full-stack application for coordination.</text>
+      <text x="15" y="68" font-size="8" fill="#64748B">Status:</text>
+      <text x="45" y="68" font-size="8" font-weight="600" fill="#94A3B8">Archived</text>
+      <text x="15" y="82" font-size="8" fill="#64748B">Stack:</text>
+      <text x="45" y="82" font-size="8" fill="#F8FAFC">Node.js, Express, MongoDB</text>
+    </g>
+  </g>
+  
+  <g transform="translate(735, 70)">
+    <!-- PhishGuard -->
+    <g transform="translate(0, 0)">
+      <rect width="225" height="95" rx="6" fill="#0F172A" stroke="#1E293B" />
+      <text x="15" y="20" font-size="11" font-weight="700" fill="#38BDF8">PhishGuard</text>
+      <text x="15" y="32" font-size="8" font-weight="600" fill="#94A3B8">URL Intelligence System</text>
+      <rect x="15" y="38" width="195" height="1" fill="#1E293B" />
+      <text x="15" y="52" font-size="9" fill="#F8FAFC">Explainable AI phishing detection engine.</text>
+      <text x="15" y="68" font-size="8" fill="#64748B">Status:</text>
+      <text x="45" y="68" font-size="8" font-weight="600" fill="#10B981">Completed</text>
+      <text x="15" y="82" font-size="8" fill="#64748B">Stack:</text>
+      <text x="45" y="82" font-size="8" fill="#F8FAFC">FastAPI, Scikit-learn, ML</text>
+    </g>
+    <!-- Portfolio -->
+    <g transform="translate(0, 110)">
+      <rect width="225" height="95" rx="6" fill="#0F172A" stroke="#1E293B" />
+      <text x="15" y="20" font-size="11" font-weight="700" fill="#38BDF8">Security Portfolio</text>
+      <text x="15" y="32" font-size="8" font-weight="600" fill="#94A3B8">Minimalist Engineering Showcase</text>
+      <rect x="15" y="38" width="195" height="1" fill="#1E293B" />
+      <text x="15" y="52" font-size="9" fill="#F8FAFC">High-performance presentation tier.</text>
+      <text x="15" y="68" font-size="8" fill="#64748B">Status:</text>
+      <text x="45" y="68" font-size="8" font-weight="600" fill="#10B981">Active</text>
+      <text x="15" y="82" font-size="8" fill="#64748B">Stack:</text>
+      <text x="45" y="82" font-size="8" fill="#F8FAFC">Next.js, Tailwind, React</text>
+    </g>
+  </g>
+
+  <!-- Engineering Impact Metrics Strip -->
+  <g transform="translate(30, 420)">
+    <rect width="940" height="90" rx="6" fill="#0F172A" stroke="#1E293B" />
+    <text x="25" y="22" font-size="10" font-weight="700" fill="#64748B" letter-spacing="1">ENGINEERING IMPACT</text>
+    
+    <!-- Widget 1: Major Projects -->
+    <g transform="translate(25, 40)">
+      <rect width="135" height="35" rx="4" fill="#020617" stroke="#1E293B" />
+      <text x="12" y="14" font-size="7" font-weight="700" fill="#94A3B8" letter-spacing="0.5">MAJOR PROJECTS</text>
+      <text x="12" y="28" font-size="12" font-weight="700" fill="#38BDF8">5</text>
+    </g>
+    <!-- Widget 2: Research Pubs -->
+    <g transform="translate(175, 40)">
+      <rect width="135" height="35" rx="4" fill="#020617" stroke="#1E293B" />
+      <text x="12" y="14" font-size="7" font-weight="700" fill="#94A3B8" letter-spacing="0.5">PUBLICATIONS</text>
+      <text x="12" y="28" font-size="12" font-weight="700" fill="#38BDF8">1</text>
+    </g>
+    <!-- Widget 3: Tech Domains -->
+    <g transform="translate(325, 40)">
+      <rect width="135" height="35" rx="4" fill="#020617" stroke="#1E293B" />
+      <text x="12" y="14" font-size="7" font-weight="700" fill="#94A3B8" letter-spacing="0.5">TECH DOMAINS</text>
+      <text x="12" y="28" font-size="12" font-weight="700" fill="#38BDF8">8</text>
+    </g>
+    <!-- Widget 4: Languages -->
+    <g transform="translate(475, 40)">
+      <rect width="135" height="35" rx="4" fill="#020617" stroke="#1E293B" />
+      <text x="12" y="14" font-size="7" font-weight="700" fill="#94A3B8" letter-spacing="0.5">PRIMARY LANGUAGES</text>
+      <text x="12" y="28" font-size="12" font-weight="700" fill="#38BDF8">4</text>
+    </g>
+    <!-- Widget 5: Platforms -->
+    <g transform="translate(625, 40)">
+      <rect width="135" height="35" rx="4" fill="#020617" stroke="#1E293B" />
+      <text x="12" y="14" font-size="7" font-weight="700" fill="#94A3B8" letter-spacing="0.5">PLATFORMS</text>
+      <text x="12" y="28" font-size="10" font-weight="700" fill="#38BDF8">Desktop &amp; Web</text>
+    </g>
+    <!-- Widget 6: Focus -->
+    <g transform="translate(775, 40)">
+      <rect width="135" height="35" rx="4" fill="#020617" stroke="#1E293B" />
+      <text x="12" y="14" font-size="7" font-weight="700" fill="#94A3B8" letter-spacing="0.5">RESEARCH FOCUS</text>
+      <text x="12" y="28" font-size="10" font-weight="700" fill="#38BDF8">AI Security</text>
+    </g>
+  </g>
+
+</svg>

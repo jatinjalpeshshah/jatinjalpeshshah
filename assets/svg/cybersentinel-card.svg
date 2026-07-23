@@ -1,0 +1,441 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="100%" height="100%">
+  <defs>
+    <!-- Background Patterns -->
+    <pattern id="dot-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="rgba(59, 130, 246, 0.15)"/>
+    </pattern>
+    <pattern id="hex-grid" width="52" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 26 0 L 52 15 L 52 45 L 26 60 L 0 45 L 0 15 Z" fill="none" stroke="rgba(59, 130, 246, 0.04)" stroke-width="1"/>
+    </pattern>
+    
+    <!-- Gradients & Filters -->
+    <radialGradient id="radar-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(16, 185, 129, 0.04)" />
+      <stop offset="100%" stop-color="rgba(10, 14, 18, 0)" />
+    </radialGradient>
+    <linearGradient id="scan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(59, 130, 246, 0)" />
+      <stop offset="50%" stop-color="rgba(59, 130, 246, 0.1)" />
+      <stop offset="100%" stop-color="rgba(59, 130, 246, 0)" />
+    </linearGradient>
+    
+    <filter id="shadow-md" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="shadow-sm" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+
+    <style>
+      .bg { fill: #080C11; }
+      
+      /* Typography */
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .font-mono { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; }
+      
+      /* UI Elements */
+      .panel-primary { fill: #0A0F19; stroke: #1E293B; }
+      .panel-glass { fill: rgba(255, 255, 255, 0.03); stroke: rgba(59, 130, 246, 0.15); }
+      .chip-bg { fill: rgba(15, 23, 42, 0.6); stroke: #1E293B; }
+      
+      /* Animations */
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+      .a-normal { animation: pulse 2.5s ease-in-out infinite; }
+      
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+      .a-fast { animation: blink 1s step-end infinite; }
+      
+      @keyframes scan { 0% { transform: translateY(-100%); } 100% { transform: translateY(540px); } }
+      .a-slow { animation: scan 8s linear infinite; }
+      
+      @keyframes gridDrift { 0% { transform: translate(0, 0); } 100% { transform: translate(-30px, -30px); } }
+      .a-background { animation: gridDrift 20s linear infinite; }
+      
+      @keyframes radarSweep { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      .a-radar { animation: radarSweep 10s linear infinite; transform-origin: center; }
+    </style>
+  </defs>
+
+  <!-- ================= BACKGROUND ================= -->
+  <rect class="bg" width="100%" height="100%" />
+  
+  <g class="a-background" opacity="0.8">
+    <rect width="1200" height="700" fill="url(#dot-grid)" x="-100" y="-100" />
+    <rect width="1200" height="700" fill="url(#hex-grid)" x="-100" y="-100" />
+  </g>
+  
+  <g transform="translate(750, 200)">
+    <circle cx="0" cy="0" r="300" fill="url(#radar-glow)" />
+    <circle cx="0" cy="0" r="100" fill="none" stroke="rgba(16, 185, 129, 0.1)" stroke-width="1" stroke-dasharray="4 4" />
+    <circle cx="0" cy="0" r="200" fill="none" stroke="rgba(16, 185, 129, 0.05)" stroke-width="1" />
+    <path d="M 0 0 L 0 -250 A 250 250 0 0 1 250 0 Z" fill="rgba(16, 185, 129, 0.03)" class="a-radar" />
+  </g>
+  
+  <rect width="100%" height="100%" fill="url(#scan)" class="a-slow" />
+
+  <!-- ================= HEADER & TAGLINE ================= -->
+  <g transform="translate(30, 30)" class="font-sans">
+    <!-- Status Badge -->
+    <rect x="0" y="0" width="60" height="20" rx="3" fill="rgba(245, 158, 11, 0.1)" stroke="#F59E0B" />
+    <text x="30" y="14" font-size="10px" font-weight="bold" fill="#F59E0B" text-anchor="middle" class="a-fast">ONGOING</text>
+    
+    <!-- Title -->
+    <text x="75" y="16" font-size="20px" font-weight="800" fill="#F8FAFC" letter-spacing="1px">CYBERSENTINEL AI</text>
+    <!-- Version -->
+    <text x="280" y="16" font-size="12px" font-weight="600" fill="#38BDF8">v3.x</text>
+    
+    <!-- Platform Type -->
+    <text x="940" y="16" font-size="12px" font-weight="600" fill="#64748B" text-anchor="end" class="font-mono">DESKTOP SECURITY PLATFORM</text>
+    
+    <!-- Tagline -->
+    <text x="0" y="45" font-size="12px" font-weight="600" fill="#94A3B8" letter-spacing="1px">
+      ENTERPRISE DESKTOP SIEM <tspan fill="#38BDF8">|</tspan> NETWORK DETECTION &amp; RESPONSE <tspan fill="#38BDF8">|</tspan> ENDPOINT DETECTION &amp; RESPONSE <tspan fill="#38BDF8">|</tspan> THREAT INTELLIGENCE
+    </text>
+  </g>
+
+  <!-- ================= MAIN DASHBOARD PREVIEW ================= -->
+  <g transform="translate(30, 95)" filter="url(#shadow-md)">
+    <!-- Main Window -->
+    <rect width="600" height="230" class="panel-primary" rx="8" />
+    
+    <!-- Title Bar -->
+    <path d="M 0 30 L 600 30" stroke="#1E293B" stroke-width="1" />
+    <circle cx="15" cy="15" r="4" fill="#EF4444" />
+    <circle cx="28" cy="15" r="4" fill="#F59E0B" />
+    <circle cx="41" cy="15" r="4" fill="#10B981" />
+    <text x="60" y="19" font-size="10px" fill="#64748B" class="font-mono">127.0.0.1 : 8443 / SOC_DASHBOARD</text>
+    
+    <!-- Left Sidebar -->
+    <path d="M 50 30 L 50 230" stroke="#1E293B" stroke-width="1" />
+    <rect x="15" y="45" width="20" height="20" rx="4" fill="rgba(59, 130, 246, 0.15)" stroke="#38BDF8" />
+    <circle cx="25" cy="85" r="8" fill="none" stroke="#64748B" stroke-width="1.5" />
+    <circle cx="25" cy="115" r="8" fill="none" stroke="#64748B" stroke-width="1.5" />
+    <circle cx="25" cy="145" r="8" fill="none" stroke="#64748B" stroke-width="1.5" />
+    
+    <!-- Content Area -->
+    <g transform="translate(70, 45)" class="font-mono">
+      
+      <!-- Network Topology Track -->
+      <path d="M 20 40 L 490 40" fill="none" stroke="#1E293B" stroke-width="2" stroke-dasharray="4 4" />
+      
+      <!-- White Traffic Packets (Normal) -->
+      <circle cx="20" cy="40" r="2.5" fill="#38BDF8" opacity="0.8">
+        <animate attributeName="cx" values="20; 490" dur="4s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="20" cy="40" r="2.5" fill="#38BDF8" opacity="0.8">
+        <animate attributeName="cx" values="20; 490" begin="1s" dur="4s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="20" cy="40" r="2.5" fill="#38BDF8" opacity="0.8">
+        <animate attributeName="cx" values="20; 490" begin="2s" dur="4s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="20" cy="40" r="2.5" fill="#38BDF8" opacity="0.8">
+        <animate attributeName="cx" values="20; 490" begin="3s" dur="4s" repeatCount="indefinite" />
+      </circle>
+      
+      <!-- Red Traffic Packet (Attack) -->
+      <g>
+        <circle cx="20" cy="40" r="4" fill="#EF4444">
+          <animate attributeName="cx" values="20; 320; 320; 20" keyTimes="0; 0.35; 0.99; 1" dur="8s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.05; 0.34; 0.36; 1" dur="8s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="20" cy="40" r="8" fill="none" stroke="#EF4444" stroke-width="1">
+          <animate attributeName="cx" values="20; 320; 320; 20" keyTimes="0; 0.35; 0.99; 1" dur="8s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.05; 0.34; 0.36; 1" dur="8s" repeatCount="indefinite" />
+        </circle>
+      </g>
+
+      <!-- Network Nodes (drawn over the packets) -->
+      <!-- Workstation -->
+      <g stroke="#38BDF8" fill="#0A0F19" stroke-width="1.5">
+        <rect x="12" y="30" width="16" height="12" rx="2" />
+        <path d="M 16 46 L 24 46" />
+        <path d="M 20 42 L 20 46" />
+      </g>
+      <text x="20" y="65" font-size="8px" fill="#94A3B8" text-anchor="middle">WORKSTATION</text>
+      
+      <!-- Router -->
+      <g stroke="#38BDF8" fill="#0A0F19" stroke-width="1.5">
+        <rect x="112" y="36" width="16" height="8" rx="2" />
+        <path d="M 115 36 L 113 30 M 125 36 L 127 30" />
+      </g>
+      <text x="120" y="65" font-size="8px" fill="#94A3B8" text-anchor="middle">ROUTER</text>
+      
+      <!-- Server -->
+      <g stroke="#38BDF8" fill="#0A0F19" stroke-width="1.5">
+        <rect x="214" y="28" width="12" height="18" rx="2" />
+        <path d="M 214 34 L 226 34 M 214 40 L 226 40" />
+      </g>
+      <text x="220" y="65" font-size="8px" fill="#94A3B8" text-anchor="middle">SERVER</text>
+      
+      <!-- Protection Shield / Detection Event -->
+      <g>
+        <path d="M 320 20 L 335 28 L 335 48 L 320 60 L 305 48 L 305 28 Z" stroke="#10B981" stroke-width="2" fill="rgba(16,185,129,0.15)">
+          <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.34; 0.36; 0.6; 0.7; 1" dur="8s" repeatCount="indefinite" />
+        </path>
+        <circle cx="320" cy="40" r="4" fill="#EF4444">
+          <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.35; 0.36; 0.55; 0.6; 1" dur="8s" repeatCount="indefinite" />
+        </circle>
+        <text x="320" y="12" font-size="9px" font-weight="bold" fill="#EF4444" text-anchor="middle">
+          <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.36; 0.37; 0.7; 0.75; 1" dur="8s" repeatCount="indefinite" />
+          QUARANTINED
+        </text>
+      </g>
+
+      <!-- Firewall -->
+      <g stroke="#38BDF8" fill="#0A0F19" stroke-width="1.5">
+        <rect x="392" y="28" width="16" height="18" rx="2" />
+        <path d="M 392 34 L 408 34 M 392 40 L 408 40 M 398 28 L 398 34 M 402 34 L 402 40 M 398 40 L 398 46" />
+      </g>
+      <text x="400" y="65" font-size="8px" fill="#94A3B8" text-anchor="middle">FIREWALL</text>
+
+      <!-- Internet -->
+      <g stroke="#38BDF8" fill="#0A0F19" stroke-width="1.5">
+        <circle cx="490" cy="40" r="10" />
+        <ellipse cx="490" cy="40" rx="4" ry="10" />
+        <path d="M 480 40 L 500 40" />
+      </g>
+      <text x="490" y="65" font-size="8px" fill="#94A3B8" text-anchor="middle">INTERNET</text>
+
+      <!-- Event Feed Panel (Bottom Left) -->
+      <g transform="translate(10, 110)">
+        <text x="0" y="0" font-size="9px" fill="#64748B" font-weight="bold">LATEST EVENTS</text>
+        
+        <!-- Normal State Feed -->
+        <g>
+          <animate attributeName="opacity" values="1; 1; 0; 0; 1; 1" keyTimes="0; 0.34; 0.35; 0.84; 0.85; 1" dur="8s" repeatCount="indefinite" />
+          
+          <rect x="0" y="8" width="230" height="16" fill="rgba(16, 185, 129, 0.1)" rx="2" />
+          <text x="8" y="19" font-size="9px" fill="#10B981">[INFO] Network Traffic Stable</text>
+          
+          <rect x="0" y="28" width="230" height="16" fill="rgba(16, 185, 129, 0.1)" rx="2" />
+          <text x="8" y="39" font-size="9px" fill="#10B981">[INFO] Threat Intel Feeds Synced</text>
+        </g>
+        
+        <!-- Alert State Feed -->
+        <g opacity="0">
+          <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.34; 0.35; 0.84; 0.85; 1" dur="8s" repeatCount="indefinite" />
+          
+          <rect x="0" y="8" width="230" height="16" fill="rgba(239, 68, 68, 0.1)" rx="2" />
+          <text x="8" y="19" font-size="9px" fill="#EF4444" font-weight="bold">[CRIT] Malicious Packet Blocked</text>
+          
+          <rect x="0" y="28" width="230" height="16" fill="rgba(245, 158, 11, 0.1)" rx="2" />
+          <text x="8" y="39" font-size="9px" fill="#F59E0B">[WARN] Suspicious Traffic Detected</text>
+        </g>
+      </g>
+      
+      <!-- Traffic Analytics Chart (Bottom Right) -->
+      <g transform="translate(280, 100)">
+        <text x="0" y="0" font-size="9px" fill="#64748B" font-weight="bold">TRAFFIC ANALYTICS</text>
+        
+        <!-- Base Blue Bars -->
+        <rect x="0" y="35" width="10" height="15" fill="#38BDF8" opacity="0.6" rx="1" />
+        <rect x="15" y="25" width="10" height="25" fill="#38BDF8" opacity="0.8" rx="1" />
+        <rect x="30" y="20" width="10" height="30" fill="#38BDF8" opacity="0.7" rx="1" />
+        
+        <!-- The Spiking Alert Bar -->
+        <rect x="45" y="35" width="10" height="15" rx="1" fill="#38BDF8" opacity="0.5">
+          <animate attributeName="y" values="35; 35; 10; 35; 35" keyTimes="0; 0.34; 0.35; 0.6; 1" dur="8s" repeatCount="indefinite" />
+          <animate attributeName="height" values="15; 15; 40; 15; 15" keyTimes="0; 0.34; 0.35; 0.6; 1" dur="8s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#38BDF8; #38BDF8; #EF4444; #38BDF8; #38BDF8" keyTimes="0; 0.34; 0.35; 0.6; 1" dur="8s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.5; 0.5; 1; 0.5; 0.5" keyTimes="0; 0.34; 0.35; 0.6; 1" dur="8s" repeatCount="indefinite" />
+        </rect>
+
+        <rect x="60" y="30" width="10" height="20" fill="#38BDF8" opacity="0.6" rx="1" />
+        <rect x="75" y="40" width="10" height="10" fill="#38BDF8" opacity="0.4" rx="1" />
+        <rect x="90" y="25" width="10" height="25" fill="#38BDF8" opacity="0.7" rx="1" />
+        <rect x="105" y="15" width="10" height="35" fill="#38BDF8" opacity="0.8" rx="1" />
+        <rect x="120" y="30" width="10" height="20" fill="#38BDF8" opacity="0.5" rx="1" />
+        <rect x="135" y="20" width="10" height="30" fill="#38BDF8" opacity="0.7" rx="1" />
+        <rect x="150" y="40" width="10" height="10" fill="#38BDF8" opacity="0.4" rx="1" />
+        <rect x="165" y="25" width="10" height="25" fill="#38BDF8" opacity="0.6" rx="1" />
+        <rect x="180" y="35" width="10" height="15" fill="#38BDF8" opacity="0.5" rx="1" />
+        <rect x="195" y="20" width="10" height="30" fill="#38BDF8" opacity="0.8" rx="1" />
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= METRICS & FEATURE GRID ================= -->
+  <g transform="translate(650, 95)" class="font-sans">
+    
+    <!-- Platform Architecture Container -->
+    <rect width="320" height="60" class="panel-glass" filter="url(#shadow-sm)" rx="6" />
+    <rect x="0" y="0" width="3" height="60" fill="#38BDF8" rx="1.5" />
+    <text x="15" y="22" font-size="10px" font-weight="700" fill="#64748B" letter-spacing="1px">PLATFORM ARCHITECTURE</text>
+    <text x="15" y="44" font-size="14px" font-weight="700" fill="#F8FAFC">Windows Native <tspan fill="#475569" font-weight="400">|</tspan> Local Processing</text>
+    
+    <!-- Mini Metrics Row -->
+    <g transform="translate(0, 75)">
+      <!-- Metric 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="100" height="50" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <text x="10" y="20" font-size="9px" font-weight="700" fill="#64748B" letter-spacing="1px">MODULES</text>
+        <text x="10" y="40" font-size="16px" font-weight="800" fill="#F8FAFC" class="font-mono">12</text>
+      </g>
+      <!-- Metric 2 -->
+      <g transform="translate(110, 0)">
+        <rect width="100" height="50" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <text x="10" y="20" font-size="9px" font-weight="700" fill="#64748B" letter-spacing="1px">ENGINES</text>
+        <text x="10" y="40" font-size="16px" font-weight="800" fill="#F8FAFC" class="font-mono">02</text>
+      </g>
+      <!-- Metric 3 -->
+      <g transform="translate(220, 0)">
+        <rect width="100" height="50" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <text x="10" y="20" font-size="9px" font-weight="700" fill="#64748B" letter-spacing="1px">SOURCES</text>
+        <text x="10" y="40" font-size="16px" font-weight="800" fill="#F8FAFC" class="font-mono">04</text>
+      </g>
+    </g>
+
+    <!-- Feature Grid 2x2 -->
+    <g transform="translate(0, 140)">
+      <!-- Feature 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="155" height="40" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <circle cx="15" cy="20" r="4" fill="#38BDF8" />
+        <text x="28" y="18" font-size="11px" font-weight="700" fill="#F8FAFC">Network Discovery</text>
+        <text x="28" y="30" font-size="10px" fill="#94A3B8">Asset &amp; traffic visibility</text>
+      </g>
+      <!-- Feature 2 -->
+      <g transform="translate(165, 0)">
+        <rect width="155" height="40" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <circle cx="15" cy="20" r="4" fill="#EF4444" class="a-normal" />
+        <text x="28" y="18" font-size="11px" font-weight="700" fill="#F8FAFC">Threat Detection</text>
+        <text x="28" y="30" font-size="10px" fill="#94A3B8">AI &amp; Signature matching</text>
+      </g>
+      <!-- Feature 3 -->
+      <g transform="translate(0, 50)">
+        <rect width="155" height="40" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <circle cx="15" cy="20" r="4" fill="#F59E0B" />
+        <text x="28" y="18" font-size="11px" font-weight="700" fill="#F8FAFC">Investigation Workspace</text>
+        <text x="28" y="30" font-size="10px" fill="#94A3B8">Deep packet inspection</text>
+      </g>
+      <!-- Feature 4 -->
+      <g transform="translate(165, 50)">
+        <rect width="155" height="40" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <circle cx="15" cy="20" r="4" fill="#10B981" />
+        <text x="28" y="18" font-size="11px" font-weight="700" fill="#F8FAFC">Threat Intelligence</text>
+        <text x="28" y="30" font-size="10px" fill="#94A3B8">Live global feeds integration</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= ARCHITECTURE STRIP ================= -->
+  <g transform="translate(30, 345)" class="font-sans">
+    <rect width="940" height="70" class="panel-primary" filter="url(#shadow-md)" rx="6" />
+    <text x="15" y="20" font-size="9px" font-weight="800" fill="#64748B" letter-spacing="1.5px">PROCESSING PIPELINE</text>
+    
+    <g transform="translate(15, 32)">
+      <!-- Nodes -->
+      <g transform="translate(0, 0)">
+        <rect width="80" height="24" fill="rgba(59, 130, 246, 0.1)" stroke="#38BDF8" rx="3" />
+        <text x="40" y="16" font-size="9px" font-weight="700" fill="#38BDF8" text-anchor="middle">Discovery</text>
+      </g>
+      <text x="90" y="16" font-size="12px" font-weight="700" fill="#475569">›</text>
+
+      <g transform="translate(100, 0)">
+        <rect width="80" height="24" class="chip-bg" rx="3" />
+        <text x="40" y="16" font-size="9px" font-weight="600" fill="#F8FAFC" text-anchor="middle">PCAP</text>
+      </g>
+      <text x="190" y="16" font-size="12px" font-weight="700" fill="#475569">›</text>
+
+      <g transform="translate(200, 0)">
+        <rect width="80" height="24" class="chip-bg" rx="3" />
+        <text x="40" y="16" font-size="9px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Analytics</text>
+      </g>
+      <text x="290" y="16" font-size="12px" font-weight="700" fill="#475569">›</text>
+
+      <g transform="translate(300, 0)">
+        <rect width="80" height="24" class="chip-bg" rx="3" />
+        <text x="40" y="16" font-size="9px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Events</text>
+      </g>
+      <text x="390" y="16" font-size="12px" font-weight="700" fill="#475569">›</text>
+
+      <g transform="translate(400, 0)">
+        <rect width="80" height="24" fill="rgba(239, 68, 68, 0.1)" stroke="#EF4444" rx="3" />
+        <text x="40" y="16" font-size="9px" font-weight="700" fill="#EF4444" text-anchor="middle">Detection</text>
+      </g>
+      <text x="490" y="16" font-size="12px" font-weight="700" fill="#475569">›</text>
+
+      <g transform="translate(500, 0)">
+        <rect width="80" height="24" class="chip-bg" rx="3" />
+        <text x="40" y="16" font-size="9px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Threat Intel</text>
+      </g>
+      <text x="590" y="16" font-size="12px" font-weight="700" fill="#475569">›</text>
+
+      <g transform="translate(600, 0)">
+        <rect width="80" height="24" class="chip-bg" rx="3" />
+        <text x="40" y="16" font-size="9px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Correlation</text>
+      </g>
+      <text x="690" y="16" font-size="12px" font-weight="700" fill="#475569">›</text>
+
+      <g transform="translate(700, 0)">
+        <rect width="80" height="24" class="chip-bg" rx="3" />
+        <text x="40" y="16" font-size="9px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Alert Center</text>
+      </g>
+      <text x="790" y="16" font-size="12px" font-weight="700" fill="#475569">›</text>
+
+      <g transform="translate(800, 0)">
+        <rect width="110" height="24" fill="rgba(16, 185, 129, 0.1)" stroke="#10B981" rx="3" />
+        <text x="55" y="16" font-size="9px" font-weight="700" fill="#10B981" text-anchor="middle">Investigation</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= TECHNOLOGY STACK ================= -->
+  <g transform="translate(30, 435)" class="font-sans">
+    
+    <!-- Column 1: Desktop -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="10" font-size="10px" font-weight="800" fill="#64748B" letter-spacing="1.5px">DESKTOP</text>
+      <rect x="0" y="20" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="36" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Electron</text>
+      <rect x="0" y="50" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="66" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">React</text>
+      <rect x="0" y="80" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="96" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">TypeScript</text>
+    </g>
+
+    <!-- Column 2: Backend -->
+    <g transform="translate(180, 0)">
+      <text x="0" y="10" font-size="10px" font-weight="800" fill="#64748B" letter-spacing="1.5px">BACKEND</text>
+      <rect x="0" y="20" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="36" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">FastAPI</text>
+      <rect x="0" y="50" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="66" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Python</text>
+      <rect x="0" y="80" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="96" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">SQLite</text>
+    </g>
+
+    <!-- Column 3: Networking -->
+    <g transform="translate(360, 0)">
+      <text x="0" y="10" font-size="10px" font-weight="800" fill="#64748B" letter-spacing="1.5px">NETWORKING</text>
+      <rect x="0" y="20" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="36" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Scapy</text>
+      <rect x="0" y="50" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="66" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Npcap</text>
+      <rect x="0" y="80" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="96" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Socket APIs</text>
+    </g>
+
+    <!-- Column 4: Analytics -->
+    <g transform="translate(540, 0)">
+      <text x="0" y="10" font-size="10px" font-weight="800" fill="#64748B" letter-spacing="1.5px">ANALYTICS</text>
+      <rect x="0" y="20" width="120" height="24" class="chip-bg" rx="3" />
+      <text x="60" y="36" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Threat Intelligence</text>
+      <rect x="0" y="50" width="120" height="24" class="chip-bg" rx="3" />
+      <text x="60" y="66" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Detection Rules</text>
+      <rect x="0" y="80" width="120" height="24" class="chip-bg" rx="3" />
+      <text x="60" y="96" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Correlation Engine</text>
+    </g>
+
+    <!-- Column 5: Visualization -->
+    <g transform="translate(760, 0)">
+      <text x="0" y="10" font-size="10px" font-weight="800" fill="#64748B" letter-spacing="1.5px">VISUALIZATION</text>
+      <rect x="0" y="20" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="36" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Recharts</text>
+      <rect x="0" y="50" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="66" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Tailwind</text>
+      <rect x="0" y="80" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="96" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">ShadCN UI</text>
+    </g>
+  </g>
+</svg>

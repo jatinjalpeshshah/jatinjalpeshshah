@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540" class="font-sans">
+  <defs>
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .a-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+      .grid-move { animation: gridPan 30s linear infinite; }
+      @keyframes gridPan { from { transform: translateX(0); } to { transform: translateX(-40px); } }
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.5" opacity="0.4" />
+    </pattern>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-grad)" />
+  <g class="grid-move">
+    <rect x="0" y="0" width="1040" height="100%" fill="url(#grid)" />
+  </g>
+
+  <!-- Hexagonal Accents -->
+  <g fill="none" stroke="#38BDF8" stroke-width="0.5" opacity="0.15">
+    <polygon points="900,50 920,40 940,50 940,70 920,80 900,70" />
+    <polygon points="860,60 880,50 900,60 900,80 880,90 860,80" />
+    <polygon points="940,60 960,50 980,60 980,80 960,90 940,80" />
+  </g>
+
+  <!-- Header -->
+  <g transform="translate(30, 40)">
+    <text x="0" y="0" font-size="10" font-weight="700" fill="#94A3B8" letter-spacing="1">GET2GATHER</text>
+    <text x="85" y="0" font-size="10" font-weight="700" fill="#38BDF8">v1.0</text>
+    <circle cx="125" cy="-3" r="3" fill="#10B981" class="a-pulse" />
+    <text x="133" y="0" font-size="10" font-weight="700" fill="#10B981">COMPLETED</text>
+    <text x="210" y="0" font-size="10" fill="#64748B">// Full Stack Event Management Platform</text>
+  </g>
+
+  <!-- Main Dashboard: Horizontal Workflow -->
+  <rect x="30" y="80" width="940" height="100" rx="6" fill="#020617" stroke="#1E293B" />
+  <text x="45" y="100" font-size="8" font-weight="700" fill="#64748B" letter-spacing="1">APPLICATION LIFECYCLE</text>
+  
+  <!-- Workflow Line -->
+  <path d="M120,140 L880,140" fill="none" stroke="#1E293B" stroke-width="1.5" />
+  
+  <!-- Animated Data Flow (Moves along the line, behind the boxes) -->
+  <g>
+    <circle r="1.5" fill="#10B981"><animateMotion dur="6s" repeatCount="indefinite" path="M120,140 L880,140" /></circle>
+    <circle r="1.5" fill="#38BDF8"><animateMotion dur="6s" begin="2s" repeatCount="indefinite" path="M120,140 L880,140" /></circle>
+    <circle r="1.5" fill="#10B981"><animateMotion dur="6s" begin="4s" repeatCount="indefinite" path="M120,140 L880,140" /></circle>
+  </g>
+
+  <!-- Workflow Nodes (Solid fill hides data line internally) -->
+  <g fill="#0F172A">
+    <rect x="70" y="122" width="100" height="36" rx="4" stroke="#1E293B">
+      <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="6s" begin="0s" repeatCount="indefinite" />
+    </rect>
+    <text x="75" y="133" font-size="6" font-weight="700" fill="#94A3B8">01</text>
+    <text x="120" y="143" font-size="8" font-weight="600" fill="#F8FAFC" text-anchor="middle">User Login</text>
+
+    <rect x="222" y="122" width="100" height="36" rx="4" stroke="#1E293B">
+      <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="6s" begin="1s" repeatCount="indefinite" />
+    </rect>
+    <text x="227" y="133" font-size="6" font-weight="700" fill="#94A3B8">02</text>
+    <text x="272" y="143" font-size="8" font-weight="600" fill="#F8FAFC" text-anchor="middle">Browse Events</text>
+
+    <rect x="374" y="122" width="100" height="36" rx="4" stroke="#1E293B">
+      <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="6s" begin="2s" repeatCount="indefinite" />
+    </rect>
+    <text x="379" y="133" font-size="6" font-weight="700" fill="#94A3B8">03</text>
+    <text x="424" y="143" font-size="8" font-weight="600" fill="#F8FAFC" text-anchor="middle">Register</text>
+
+    <rect x="526" y="122" width="100" height="36" rx="4" stroke="#1E293B">
+      <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="6s" begin="3s" repeatCount="indefinite" />
+    </rect>
+    <text x="531" y="133" font-size="6" font-weight="700" fill="#94A3B8">04</text>
+    <text x="576" y="143" font-size="8" font-weight="600" fill="#F8FAFC" text-anchor="middle">QR Verification</text>
+
+    <rect x="678" y="122" width="100" height="36" rx="4" stroke="#1E293B">
+      <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="6s" begin="4s" repeatCount="indefinite" />
+    </rect>
+    <text x="683" y="133" font-size="6" font-weight="700" fill="#94A3B8">05</text>
+    <text x="728" y="143" font-size="8" font-weight="600" fill="#F8FAFC" text-anchor="middle">Attendance</text>
+
+    <rect x="830" y="122" width="100" height="36" rx="4" stroke="#1E293B">
+      <animate attributeName="stroke" values="#1E293B;#38BDF8;#1E293B" dur="6s" begin="5s" repeatCount="indefinite" />
+    </rect>
+    <text x="835" y="133" font-size="6" font-weight="700" fill="#94A3B8">06</text>
+    <text x="880" y="143" font-size="8" font-weight="600" fill="#F8FAFC" text-anchor="middle">Analytics</text>
+  </g>
+
+  <!-- Feature Panels (4 Cards) -->
+  <!-- Card 1: Authentication -->
+  <rect x="30" y="200" width="223" height="85" rx="6" fill="#0F172A" stroke="#1E293B" />
+  <rect x="45" y="215" width="20" height="20" rx="4" fill="#020617" stroke="#38BDF8" />
+  <circle cx="55" cy="225" r="5" fill="none" stroke="#38BDF8" stroke-dasharray="2 2" />
+  <circle cx="55" cy="225" r="1.5" fill="#38BDF8" />
+  <text x="75" y="229" font-size="10" font-weight="700" fill="#F8FAFC">Authentication</text>
+  <rect x="45" y="244" width="193" height="1" fill="#1E293B" />
+  <text x="45" y="260" font-size="9" fill="#94A3B8">Secure Login &amp; User Roles</text>
+  <text x="45" y="272" font-size="7" fill="#64748B">JWT • Role-based Access</text>
+
+  <!-- Card 2: Event Management -->
+  <rect x="269" y="200" width="223" height="85" rx="6" fill="#0F172A" stroke="#1E293B" />
+  <rect x="284" y="215" width="20" height="20" rx="4" fill="#020617" stroke="#38BDF8" />
+  <rect x="290" y="219" width="8" height="12" rx="1" fill="none" stroke="#38BDF8" />
+  <line x1="290" y1="223" x2="298" y2="223" stroke="#38BDF8" />
+  <text x="314" y="229" font-size="10" font-weight="700" fill="#F8FAFC">Event Management</text>
+  <rect x="284" y="244" width="193" height="1" fill="#1E293B" />
+  <text x="284" y="260" font-size="9" fill="#94A3B8">Create / Edit / Organize Events</text>
+  <text x="284" y="272" font-size="7" fill="#64748B">CRUD Engine • Dashboard</text>
+
+  <!-- Card 3: Attendance Tracking -->
+  <rect x="508" y="200" width="223" height="85" rx="6" fill="#0F172A" stroke="#1E293B" />
+  <rect x="523" y="215" width="20" height="20" rx="4" fill="#020617" stroke="#38BDF8" />
+  <rect x="529" y="219" width="4" height="4" fill="#38BDF8" />
+  <rect x="535" y="219" width="4" height="4" fill="none" stroke="#38BDF8" />
+  <rect x="529" y="225" width="4" height="4" fill="none" stroke="#38BDF8" />
+  <rect x="535" y="225" width="4" height="4" fill="#38BDF8" />
+  <text x="553" y="229" font-size="10" font-weight="700" fill="#F8FAFC">Attendance Tracking</text>
+  <rect x="523" y="244" width="193" height="1" fill="#1E293B" />
+  <text x="523" y="260" font-size="9" fill="#94A3B8">QR-Based Check-In System</text>
+  <text x="523" y="272" font-size="7" fill="#64748B">Real-time Validation • Ticketing</text>
+
+  <!-- Card 4: Analytics Dashboard -->
+  <rect x="747" y="200" width="223" height="85" rx="6" fill="#0F172A" stroke="#1E293B" />
+  <rect x="762" y="215" width="20" height="20" rx="4" fill="#020617" stroke="#38BDF8" />
+  <rect x="766" y="224" width="3" height="5" fill="#38BDF8" />
+  <rect x="771" y="220" width="3" height="9" fill="#38BDF8" />
+  <rect x="776" y="216" width="3" height="13" fill="#38BDF8" />
+  <text x="792" y="229" font-size="10" font-weight="700" fill="#F8FAFC">Analytics Dashboard</text>
+  <rect x="762" y="244" width="193" height="1" fill="#1E293B" />
+  <text x="762" y="260" font-size="9" fill="#94A3B8">Participation &amp; Insights</text>
+  <text x="762" y="272" font-size="7" fill="#64748B">Data Aggregation • Metrics</text>
+
+  <!-- Lower Section -->
+  <!-- Panel 1: Architecture -->
+  <rect x="30" y="300" width="303" height="210" rx="6" fill="#020617" stroke="#1E293B" />
+  <text x="45" y="320" font-size="8" font-weight="700" fill="#64748B" letter-spacing="1">SYSTEM ARCHITECTURE</text>
+  
+  <!-- Architecture Flow -->
+  <path d="M90,342 L90,482" fill="none" stroke="#1E293B" stroke-width="1.5" />
+  <circle r="1.5" fill="#38BDF8"><animateMotion dur="4s" repeatCount="indefinite" path="M90,342 L90,482" /></circle>
+  
+  <g stroke="#1E293B" stroke-width="1.5" fill="none">
+    <path d="M90,342 L120,342" />
+    <path d="M90,377 L120,377" />
+    <path d="M90,412 L120,412" />
+    <path d="M90,447 L120,447" />
+    <path d="M90,482 L120,482" />
+  </g>
+
+  <g fill="#0F172A" stroke="#1E293B">
+    <rect x="120" y="332" width="140" height="20" rx="2" />
+    <rect x="120" y="367" width="140" height="20" rx="2" />
+    <rect x="120" y="402" width="140" height="20" rx="2" />
+    <rect x="120" y="437" width="140" height="20" rx="2" />
+    <rect x="120" y="472" width="140" height="20" rx="2" />
+  </g>
+
+  <g font-size="8" font-weight="600" fill="#F8FAFC">
+    <text x="130" y="345">Client App</text>
+    <text x="130" y="380">Frontend (React)</text>
+    <text x="130" y="415">API Gateway (Node.js)</text>
+    <text x="130" y="450">Database (MongoDB)</text>
+    <text x="130" y="485">Reporting Engine</text>
+  </g>
+
+  <!-- Panel 2: Technology Stack -->
+  <rect x="348" y="300" width="303" height="210" rx="6" fill="#020617" stroke="#1E293B" />
+  <text x="363" y="320" font-size="8" font-weight="700" fill="#64748B" letter-spacing="1">TECHNOLOGY STACK</text>
+  
+  <!-- Frontend -->
+  <text x="363" y="340" font-size="7" font-weight="700" fill="#94A3B8">FRONTEND</text>
+  <rect x="363" y="346" width="45" height="16" rx="2" fill="#0F172A" stroke="#1E293B" />
+  <text x="385.5" y="357" font-size="7" font-weight="600" fill="#F8FAFC" text-anchor="middle">React</text>
+  <rect x="413" y="346" width="55" height="16" rx="2" fill="#0F172A" stroke="#1E293B" />
+  <text x="440.5" y="357" font-size="7" font-weight="600" fill="#F8FAFC" text-anchor="middle">Tailwind</text>
+  <rect x="473" y="346" width="45" height="16" rx="2" fill="#0F172A" stroke="#1E293B" />
+  <text x="495.5" y="357" font-size="7" font-weight="600" fill="#F8FAFC" text-anchor="middle">Redux</text>
+
+  <!-- Backend -->
+  <text x="363" y="382" font-size="7" font-weight="700" fill="#94A3B8">BACKEND</text>
+  <rect x="363" y="388" width="55" height="16" rx="2" fill="#0F172A" stroke="#1E293B" />
+  <text x="390.5" y="399" font-size="7" font-weight="600" fill="#F8FAFC" text-anchor="middle">Node.js</text>
+  <rect x="423" y="388" width="50" height="16" rx="2" fill="#0F172A" stroke="#1E293B" />
+  <text x="448.5" y="399" font-size="7" font-weight="600" fill="#F8FAFC" text-anchor="middle">Express</text>
+  <rect x="478" y="388" width="55" height="16" rx="2" fill="#0F172A" stroke="#1E293B" />
+  <text x="505.5" y="399" font-size="7" font-weight="600" fill="#F8FAFC" text-anchor="middle">REST API</text>
+
+  <!-- Database -->
+  <text x="363" y="424" font-size="7" font-weight="700" fill="#94A3B8">DATABASE</text>
+  <rect x="363" y="430" width="60" height="16" rx="2" fill="#0F172A" stroke="#1E293B" />
+  <text x="393" y="441" font-size="7" font-weight="600" fill="#F8FAFC" text-anchor="middle">MongoDB</text>
+  <rect x="428" y="430" width="60" height="16" rx="2" fill="#0F172A" stroke="#1E293B" />
+  <text x="458" y="441" font-size="7" font-weight="600" fill="#F8FAFC" text-anchor="middle">Mongoose</text>
+  <rect x="493" y="430" width="45" height="16" rx="2" fill="#0F172A" stroke="#1E293B" />
+  <text x="515.5" y="441" font-size="7" font-weight="600" fill="#F8FAFC" text-anchor="middle">Redis</text>
+
+  <!-- Deployment -->
+  <text x="363" y="466" font-size="7" font-weight="700" fill="#94A3B8">DEPLOYMENT</text>
+  <rect x="363" y="472" width="50" height="16" rx="2" fill="#0F172A" stroke="#1E293B" />
+  <text x="388" y="483" font-size="7" font-weight="600" fill="#F8FAFC" text-anchor="middle">Docker</text>
+  <rect x="418" y="472" width="45" height="16" rx="2" fill="#0F172A" stroke="#1E293B" />
+  <text x="440.5" y="483" font-size="7" font-weight="600" fill="#F8FAFC" text-anchor="middle">AWS</text>
+  <rect x="468" y="472" width="45" height="16" rx="2" fill="#0F172A" stroke="#1E293B" />
+  <text x="490.5" y="483" font-size="7" font-weight="600" fill="#F8FAFC" text-anchor="middle">Vercel</text>
+
+  <!-- Panel 3: Operational Metrics -->
+  <rect x="666" y="300" width="304" height="210" rx="6" fill="#020617" stroke="#1E293B" />
+  <text x="681" y="320" font-size="8" font-weight="700" fill="#64748B" letter-spacing="1">OPERATIONAL METRICS</text>
+
+  <g transform="translate(681, 345)">
+    <text x="0" y="4" font-size="9" font-weight="600" fill="#94A3B8">Modules</text>
+    <path d="M 50 1 L 205 1" fill="none" stroke="#1E293B" stroke-dasharray="2 4" />
+    <text x="250" y="4" font-size="9" font-weight="700" fill="#10B981" text-anchor="end">Active</text>
+    <circle cx="262" cy="1" r="3" fill="#10B981" class="a-pulse" />
+  </g>
+  <g transform="translate(681, 375)">
+    <text x="0" y="4" font-size="9" font-weight="600" fill="#94A3B8">Authentication</text>
+    <path d="M 75 1 L 205 1" fill="none" stroke="#1E293B" stroke-dasharray="2 4" />
+    <text x="250" y="4" font-size="9" font-weight="700" fill="#38BDF8" text-anchor="end">Enabled</text>
+    <circle cx="262" cy="1" r="3" fill="#38BDF8" class="a-pulse" />
+  </g>
+  <g transform="translate(681, 405)">
+    <text x="0" y="4" font-size="9" font-weight="600" fill="#94A3B8">QR Check-In</text>
+    <path d="M 65 1 L 205 1" fill="none" stroke="#1E293B" stroke-dasharray="2 4" />
+    <text x="250" y="4" font-size="9" font-weight="700" fill="#10B981" text-anchor="end">Ready</text>
+    <circle cx="262" cy="1" r="3" fill="#10B981" class="a-pulse" />
+  </g>
+  <g transform="translate(681, 435)">
+    <text x="0" y="4" font-size="9" font-weight="600" fill="#94A3B8">Dashboard</text>
+    <path d="M 55 1 L 205 1" fill="none" stroke="#1E293B" stroke-dasharray="2 4" />
+    <text x="250" y="4" font-size="9" font-weight="700" fill="#10B981" text-anchor="end">Online</text>
+    <circle cx="262" cy="1" r="3" fill="#10B981" class="a-pulse" />
+  </g>
+  <g transform="translate(681, 465)">
+    <text x="0" y="4" font-size="9" font-weight="600" fill="#94A3B8">Deployment</text>
+    <path d="M 60 1 L 205 1" fill="none" stroke="#1E293B" stroke-dasharray="2 4" />
+    <text x="250" y="4" font-size="9" font-weight="700" fill="#38BDF8" text-anchor="end">Available</text>
+    <circle cx="262" cy="1" r="3" fill="#38BDF8" class="a-pulse" />
+  </g>
+
+</svg>

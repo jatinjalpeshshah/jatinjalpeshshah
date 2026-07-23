@@ -1,243 +1,314 @@
 <div align="center">
-  <table width="100%">
-    <tr>
-      <td align="center">
-        <br>
-        <img src="https://img.shields.io/badge/SYSTEM-ONLINE-238636?style=for-the-badge" alt="System Online" />
-        <img src="https://img.shields.io/badge/MODULES-SECURE-3fb950?style=for-the-badge" alt="Modules Secure" />
-        <br><br>
-        <p><b>JATIN JALPESH SHAH</b></p>
-        <p><b>CYBERSECURITY ENGINEER • SECURITY RESEARCHER</b></p>
-        <p><i>Architecting intelligent platforms for threat detection, network monitoring, and security analytics.</i></p>
-        <p>
-          <a href="https://jatinjalpeshshah.github.io"><img src="https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&amp;logo=globe&amp;logoColor=white" alt="Portfolio" /></a>
-          <a href="https://www.linkedin.com/in/jatinjalpeshshah/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn" /></a>
-          <a href="mailto:224jatin2006@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="Email" /></a>
-        </p>
-        <br>
-      </td>
-    </tr>
-  </table>
+  <img src="./assets/svg/hero-banner.svg" width="100%" alt="Vanguard OS Hero Banner">
 </div>
 
-<br><br>
-
-## 👨‍💻 About Me
-
-I am a **Cybersecurity Engineer** and **Security Researcher** specializing in the architecture of applied security platforms. Currently pursuing an Integrated Master of Computer Applications (IMCA) in Cyber Security & Forensics at Parul University, my work operates at the intersection of traditional security engineering and artificial intelligence. My research focuses intensely on **AI Security**—analyzing vulnerabilities within machine learning models and developing secure software engineering practices to neutralize emerging threat vectors.
-
-From an engineering perspective, I build systems that transform raw data into actionable intelligence. I enjoy solving practical security problems that require deep network visibility, creating platforms that can dissect network flows, operationalize threat feeds, and automate complex detection rules. I believe that effective security requires both rigorous academic research and hardened software engineering, and I continuously leverage both to build resilient, scalable detection pipelines.
-
-Looking ahead, my vision is to advance enterprise security by engineering autonomous, AI-assisted defense mechanisms. I am actively expanding my expertise in Zero Trust Architecture, malware analysis, and advanced **Detection Engineering**. Ultimately, I aim to design the next generation of **Security Analytics** platforms that empower organizations to anticipate and neutralize sophisticated cyber threats before they materialize.
-
-<br><br>
-
-## ⚙️ What I Build
-
-<table width="100%">
-  <tr>
-    <td align="center" width="33%"><b>📡 Threat Intelligence</b></td>
-    <td align="center" width="33%"><b>🛡️ Detection Engineering</b></td>
-    <td align="center" width="33%"><b>🧠 AI Security</b></td>
-  </tr>
-  <tr>
-    <td align="center" width="33%"><b>🔍 Network Monitoring</b></td>
-    <td align="center" width="33%"><b>💻 Desktop Platforms</b></td>
-    <td align="center" width="33%"><b>📊 Security Analytics</b></td>
-  </tr>
-</table>
-
-<br><br>
-
-## 🚀 Featured Projects
-
-<table width="100%">
-  <tr>
-    <td width="100%">
-      <p><b>🛡️ CyberSentinel AI</b><br>
-      <i>Enterprise SIEM / NDR Platform</i></p>
-      <br>
-      <p>A comprehensive desktop AI-powered SIEM/NDR platform engineered for deep network visibility and automated threat analysis. It integrates raw packet capture with machine learning models and live threat intelligence feeds to deliver an end-to-end detection and response workflow within a standalone, high-performance desktop architecture.</p>
-      <br>
-      <p align="center">
-        <br>
-        ────────────────────────────<br>
-        🖼️ Architecture Preview<br>
-        <i>(Future integration of network architecture flow)</i><br>
-        ────────────────────────────<br>
-        <br>
-      </p>
-      <br>
-      <p><b>Key Capabilities</b><br>
-      ✔ <b>Asset Discovery &amp; Monitoring:</b> Real-time visibility into active network flows.<br>
-      ✔ <b>AI Detection Engine:</b> AI-assisted detection rules correlating with live threat feeds.<br>
-      ✔ <b>Alert Center:</b> Centralized workspace for rapid incident triage and response.</p>
-      <br>
-      <p align="center">
-        <br>
-        ────────────────────────────<br>
-        🖥️ Dashboard Preview<br>
-        <i>(Future integration of SOC dashboard screenshots)</i><br>
-        ────────────────────────────<br>
-        <br>
-      </p>
-      <br>
-      <p><b>Core Stack</b><br>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python" /> 
-        <img src="https://img.shields.io/badge/Electron-191970?style=flat-square&amp;logo=Electron&amp;logoColor=white" alt="Electron" />
-        <img src="https://img.shields.io/badge/Machine_Learning-FF9900?style=flat-square&amp;logo=scikit-learn&amp;logoColor=white" alt="Machine Learning" />
-        <img src="https://img.shields.io/badge/Threat_Intelligence-D71F00?style=flat-square&amp;logo=security&amp;logoColor=white" alt="Threat Intelligence" />
-      </p>
-      <br>
-      <p align="right">
-        <a href="https://github.com/jatinjalpeshshah/Cyber-Sentinel-AI">
-          <img src="https://img.shields.io/badge/View_Repository-2563EB?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="View Repository" />
-        </a>
-      </p>
-    </td>
-  </tr>
-</table>
-
 <br>
-
-<table width="100%">
-  <tr>
-    <td width="100%">
-      <p><b>🎣 PhishGuard</b><br>
-      <i>AI-Powered Phishing Intelligence Platform</i></p>
-      <br>
-      <p>An advanced URL intelligence system utilizing Explainable Threat Intelligence. PhishGuard analyzes URLs to detect malicious intent while providing transparent, human-readable explanations for its classification decisions, successfully bridging the gap between black-box AI models and actionable security operations.</p>
-      <br>
-      <p align="center">
-        <br>
-        ────────────────────────────<br>
-        ⚙️ Feature Flow Preview<br>
-        <i>(Future integration of URL analysis pipeline diagram)</i><br>
-        ────────────────────────────<br>
-        <br>
-      </p>
-      <br>
-      <p><b>Key Capabilities</b><br>
-      ✔ <b>Explainable Detection:</b> Transparent ML classification logic.<br>
-      ✔ <b>URL Intelligence:</b> Real-time, deep-packet level URL analysis and heuristic scoring.</p>
-      <br>
-      <p><b>Core Stack</b><br>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python" /> 
-        <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&amp;logo=fastapi&amp;logoColor=white" alt="FastAPI" /> 
-        <img src="https://img.shields.io/badge/Machine_Learning-FF9900?style=flat-square&amp;logo=scikit-learn&amp;logoColor=white" alt="Machine Learning" />
-      </p>
-      <br>
-      <p align="right">
-        <a href="https://github.com/jatinjalpeshshah/PhishGuard">
-          <img src="https://img.shields.io/badge/View_Repository-2563EB?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="View Repository" />
-        </a>
-      </p>
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<table width="100%">
-  <tr>
-    <td width="100%">
-      <p><b>🌐 Security Portfolio</b><br>
-      <i>Minimalist Engineering Showcase</i></p>
-      <br>
-      <p>A fast, responsive, and visually pristine platform engineered to display professional security work. It prioritizes clean UX and performance to effectively communicate research findings, engineering projects, and technical writing to recruiters and peers.</p>
-      <br>
-      <p align="center">
-        <br>
-        ────────────────────────────<br>
-        💻 Responsive UI Preview<br>
-        <i>(Future integration of responsive layout previews)</i><br>
-        ────────────────────────────<br>
-        <br>
-      </p>
-      <br>
-      <p><b>Core Stack</b><br>
-        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&amp;logo=next.js&amp;logoColor=white" alt="Next.js" /> 
-        <img src="https://img.shields.io/badge/React-20232A?style=flat-square&amp;logo=react&amp;logoColor=61DAFB" alt="React" /> 
-        <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&amp;logo=tailwind-css&amp;logoColor=white" alt="Tailwind CSS" />
-      </p>
-      <br>
-      <p align="right">
-        <a href="https://github.com/jatinjalpeshshah/portfolio">
-          <img src="https://img.shields.io/badge/View_Repository-2563EB?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="View Repository" />
-        </a>
-      </p>
-    </td>
-  </tr>
-</table>
-
-<br><br>
-
-## 🛠️ Technical Expertise
-
-### Security & Threat Intelligence
-![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=Wireshark&logoColor=white)
-![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633?style=for-the-badge&logo=Burp-Suite&logoColor=white)
-![Nmap](https://img.shields.io/badge/Nmap-2B2E84?style=for-the-badge)
-
-### Network Engineering
-![Scapy](https://img.shields.io/badge/Scapy-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
-
-### Programming Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-### Backend Engineering
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-
-### Frontend Engineering
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
-### Desktop Engineering
-![Electron](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white)
-
-### Databases
-![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=python&logoColor=white)
-
-### AI & Machine Learning
-![AI Security](https://img.shields.io/badge/AI_Security-000000?style=for-the-badge&logo=openai&logoColor=white)
-![Model Risk Assessment](https://img.shields.io/badge/Model_Risk_Assessment-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine_Learning-FF9900?style=for-the-badge&logo=scikit-learn&logoColor=white)
-
-### Tooling & Environments
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-<br><br>
-
-## 📚 Publications
-
-> **[Cybersecurity Challenges and AI-Based Solutions in Industry 4.0 Environments](https://ijsrst.com/IJSRST2613948)**
-> 
-> *Published in IJSRST • Focused on ICS/SCADA Security & Artificial Intelligence*
-> 
-> An analysis of how the integration of digital networks with physical infrastructure in Industry 4.0 creates new vulnerabilities, and how artificial intelligence can securely monitor and defend these environments.
-
-<br><br>
-
-## 🤝 Collaboration & Focus
-
-I am currently deepening my expertise in **Zero Trust Architecture** and **Malware Analysis**, and am actively open to collaborations in:
-* **Cybersecurity Research:** Analyzing AI vulnerabilities and enterprise network defense.
-* **Security Engineering:** Building robust open-source security tools and automation pipelines.
-* **Professional Roles:** Internships, graduate research assistantships, and cybersecurity engineering positions.
-
-<br><br>
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=jatinjalpeshshah&amp;theme=dark&amp;hide_border=true&amp;background=0D1117" alt="GitHub Streak" />
+  <h1>Jatin Jalpesh Shah</h1>
+  <p>
+    <b>Role:</b> Cybersecurity Engineer &nbsp;•&nbsp; AI Security Researcher<br>
+    <b>Current Education:</b> Integrated Master of Computer Applications (Cyber Security & Forensics)<br>
+    <b>Current Focus:</b> Enterprise Cybersecurity Platforms &nbsp;•&nbsp; AI Security &nbsp;•&nbsp; Security Research<br>
+    <b>Open To:</b> Internships &nbsp;•&nbsp; Research Collaboration &nbsp;•&nbsp; Cybersecurity Engineering Opportunities
+  </p>
+</div>
+
+<br>
+
+<div align="center">
+  <p>
+    <b>Location:</b> Vadodara, Gujarat, India &nbsp;|&nbsp;
+    <b>Projects:</b> 4 &nbsp;|&nbsp;
+    <b>Research Publications:</b> 1 &nbsp;|&nbsp;
+    <b>Desktop Platforms:</b> 1<br>
+    <b>Cybersecurity Platforms:</b> 2 &nbsp;|&nbsp;
+    <b>Full Stack Applications:</b> 2 &nbsp;|&nbsp;
+    <b>Current Flagship Project:</b> CyberSentinel AI<br>
+    <b>Research Focus:</b> AI Security & Cybersecurity
+  </p>
+</div>
+
+<br>
+
+---
+
+<br>
+
+<a id="overview"></a>
+<div align="center">
+  <b>
+    <a href="#overview">🏠 Overview</a> &nbsp;•&nbsp;
+    <a href="#cybersentinel-ai">🛡 CyberSentinel AI</a> &nbsp;•&nbsp;
+    <a href="#phishguard">🎯 PhishGuard</a> &nbsp;•&nbsp;
+    <a href="#research">📚 Research</a> &nbsp;•&nbsp;
+    <a href="#technical-capability-matrix">⚙ Technical Capability Matrix</a> <br><br>
+    <a href="#engineering-ecosystem">🌐 Engineering Ecosystem</a> &nbsp;•&nbsp;
+    <a href="#get2gather">👥 Get2Gather</a> &nbsp;•&nbsp;
+    <a href="#engineering-journey">🗺 Engineering Journey</a> &nbsp;•&nbsp;
+    <a href="#github-analytics">📊 GitHub Analytics</a> <br><br>
+    <a href="#publications">📄 Publications</a> &nbsp;•&nbsp;
+    <a href="#certifications">🏆 Certifications</a> &nbsp;•&nbsp;
+    <a href="#connect">🤝 Connect</a>
+  </b>
+</div>
+
+<br>
+
+---
+
+<br>
+
+<a id="cybersentinel-ai"></a>
+## 🛡 CyberSentinel AI
+**Enterprise Desktop SIEM & Threat Intelligence Platform**
+
+A comprehensive desktop AI-powered SIEM/NDR platform engineered for deep network visibility and automated threat analysis. It integrates raw packet capture with machine learning models and live threat intelligence feeds to deliver an end-to-end detection and response workflow within a standalone, high-performance desktop architecture.
+
+<p align="center">
+  <img src="./assets/svg/cybersentinel-card.svg" width="100%" alt="CyberSentinel AI Dashboard">
+</p>
+
+**Key Engineering Highlights:**
+*   **Enterprise Traffic Visibility:** Real-time deep packet inspection and network flow monitoring infrastructure.
+*   **Autonomous Threat Detection:** AI-assisted detection rules continuously correlating with live threat feeds.
+*   **Centralized Security Operations:** Unified workspace for rapid incident triage, alert management, and automated response execution.
+
+<br>
+
+---
+
+<br>
+
+<a id="phishguard"></a>
+## 🎯 PhishGuard
+**AI-Powered Phishing Detection & Threat Intelligence Platform**
+
+An advanced URL intelligence system utilizing Explainable Threat Intelligence. PhishGuard analyzes URLs to detect malicious intent while providing transparent, human-readable explanations for its classification decisions, successfully bridging the gap between black-box AI models and actionable security operations.
+
+<p align="center">
+  <img src="./assets/svg/phishguard-card.svg" width="100%" alt="PhishGuard Platform">
+</p>
+
+**Key Engineering Highlights:**
+*   **Explainable ML Classification:** Transparent, heuristic-based decision logic translating AI output into human-readable analysis.
+*   **Layered URL Threat Intelligence:** Combining rule-based analysis, machine learning, brand spoof detection, blacklist verification, and threat intelligence sources to deliver comprehensive URL security assessment.
+*   **Continuous Threat Correlation:** Active intelligence integration mapping local findings against established threat signatures.
+
+<br>
+
+---
+
+<br>
+
+<a id="research"></a>
+## 📚 Research
+**Cybersecurity Challenges and AI-Based Solutions in Industry 4.0 Environments**
+
+An analysis of how the integration of digital networks with physical infrastructure in Industry 4.0 creates new vulnerabilities, and how artificial intelligence can securely monitor and defend these environments.
+
+<p align="center">
+  <img src="./assets/svg/research-card.svg" width="100%" alt="Research Publication">
+</p>
+
+**Key Research Highlights:**
+*   **ICS/SCADA Security:** Strategic frameworks for securing mission-critical industrial control systems against targeted disruptions.
+*   **Cyber-Physical System Security:** Deploying intelligent, AI-Based Threat Detection for physical infrastructure environments.
+*   **Industry 4.0 Risk Analysis:** Identifying and addressing sophisticated threat vectors and implementing AI-Based Security Solutions.
+
+<br>
+
+---
+
+<br>
+
+<a id="technical-capability-matrix"></a>
+## ⚙ Technical Capability Matrix
+**Enterprise-Grade Engineering & Security Competencies**
+
+A detailed visualization of my core technical competencies, spanning threat intelligence, network monitoring, desktop platforms, and full-stack security analytics.
+
+<p align="center">
+  <img src="./assets/svg/skills-matrix.svg" width="100%" alt="Technical Capability Matrix">
+</p>
+
+**Key Domain Highlights:**
+*   **Applied Threat Intelligence:** Engineering methodologies utilizing Wireshark, Burp Suite, and Nmap for network dissection and vulnerability mapping.
+*   **Full-Stack Security Engineering:** Scalable backend and frontend architecture development leveraging Node.js, FastAPI, Next.js, and React.
+*   **AI Integration & Data Systems:** Implementing AI security protocols, model risk assessments, and robust data persistence.
+
+<br>
+
+---
+
+<br>
+
+<a id="engineering-ecosystem"></a>
+## 🌐 Engineering Ecosystem
+**Minimalist Portfolio & Platform Architecture**
+
+A fast, responsive, and visually pristine platform engineered to display professional security work. It prioritizes clean UX and performance to effectively communicate research findings, engineering projects, and technical writing.
+
+<p align="center">
+  <img src="./assets/svg/portfolio-ecosystem.svg" width="100%" alt="Engineering Ecosystem Architecture">
+</p>
+
+**Key Architectural Highlights:**
+*   **Modular Component Design:** Scalable, strictly component-driven system architecture.
+*   **Optimized Rendering Performance:** Engineered for lightning-fast speeds and ultra-responsive layout scaling.
+*   **Vanguard OS Design System:** Powered exclusively by the Vanguard OS standard for guaranteed visual consistency across all modules.
+
+<br>
+
+---
+
+<br>
+
+<a id="get2gather"></a>
+## 👥 Get2Gather
+**Integrated Event Management & QR-Based Platform**
+
+An integrated Event Management & QR-Based Attendance Platform engineered as a demonstration of full-stack development capabilities, relational database management, and system design principles.
+
+<p align="center">
+  <img src="./assets/svg/get2gather-card.svg" width="100%" alt="Get2Gather Full Stack Dashboard">
+</p>
+
+**Key Engineering Highlights:**
+*   **End-to-End Application Architecture:** Full-stack orchestration from database persistence to client interface.
+*   **Scalable Event Processing:** Reliable system design ensuring high-availability event tracking and user management.
+*   **Automated Verification Systems:** Streamlined, QR-based processing pipelines for instantaneous attendance logging.
+
+<br>
+
+---
+
+<br>
+
+<a id="engineering-journey"></a>
+## 🗺 Engineering Journey
+**Chronological Professional Roadmap**
+
+A precise timeline of my professional evolution, tracking my journey from core academic foundations through the architectural development of enterprise security platforms.
+
+<p align="center">
+  <img src="./assets/svg/professional-timeline.svg" width="100%" alt="Professional Timeline Roadmap">
+</p>
+
+**Key Evolution Highlights:**
+*   **Rigorous Academic Foundation:** Focused cybersecurity studies via the Integrated Master of Computer Applications (IMCA) program.
+*   **Security Platform Engineering:** End-to-end design and deployment of CyberSentinel AI, PhishGuard, and Get2Gather.
+*   **Current Engineering Focus:** Enterprise Detection Engineering, AI Security, Threat Intelligence, and Security Research.
+
+<br>
+
+---
+
+<br>
+
+<a id="github-analytics"></a>
+## 📊 GitHub Analytics
+**Open Source Activity & Code Contributions**
+
+Real-time telemetry of my open-source engineering ecosystem.
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=jatinjalpeshshah&show_icons=true&theme=dark" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jatinjalpeshshah&layout=compact&theme=dark" alt="Top Languages" />
   <br><br>
-  <img src="https://komarev.com/ghpvc/?username=jatinjalpeshshah&amp;label=Profile%20Views&amp;color=0e75b6&amp;style=flat" alt="Profile Views" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jatinjalpeshshah&theme=dark" alt="GitHub Streak" />
+  <br><br>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jatinjalpeshshah&theme=github-dark" alt="GitHub Activity Graph" />
+  <br><br>
+  <img src="https://ghchart.rshah.org/38BDF8/jatinjalpeshshah" alt="GitHub Contribution Graph" />
+</div>
+
+<br>
+
+---
+
+<br>
+
+<a id="publications"></a>
+## 📄 Publications
+**Verified Academic Research & Scientific Contributions**
+
+Detailed overview of my published scientific work in the cybersecurity domain.
+
+*   **Paper Title:** Cybersecurity Challenges and AI-Based Solutions in Industry 4.0 Environments
+*   **Journal:** International Journal of Scientific Research in Science and Technology (IJSRST)
+*   **Publication Date:** 07 March 2026
+*   **Research Domain:** ICS/SCADA Security & Artificial Intelligence
+*   **Short Summary:** An analysis of how the integration of digital networks with physical infrastructure in Industry 4.0 creates new vulnerabilities, and how artificial intelligence can securely monitor and defend these environments against cyber-physical attacks.
+*   **DOI / Publication Link:** [10.32628/IJSRST2613948](https://ijsrst.com/IJSRST2613948)
+
+<br>
+
+---
+
+<br>
+
+<a id="certifications"></a>
+## 🏆 Certifications
+**Verified Professional Credentials & Training**
+
+A curated selection of my strongest professional credentials. Additional certifications are available in my complete credential portfolio.
+
+**Cybersecurity**
+*   Cisco Ethical Hacker
+*   Cisco Network Defense
+*   Cisco Endpoint Security
+
+**Information Security**
+*   ISO/IEC 27001:2022 Information Security Associate
+
+**Programming**
+*   Cisco Python Essentials 1
+*   NPTEL Data Structures & Algorithms
+
+**Professional Training**
+*   ISC² CC Training *(Training only)*
+
+<br>
+
+---
+
+<br>
+
+<a id="connect"></a>
+## 🤝 Connect
+**Professional Networking & Research Collaboration**
+
+Open to:
+*   Cybersecurity Internships
+*   AI Security Research
+*   Detection Engineering
+*   Threat Intelligence
+*   Open Source Security Projects
+
+<div align="center">
+  <br>
+  <b>
+    <a href="https://jatinjalpeshshah.github.io">Portfolio</a> &nbsp;•&nbsp;
+    <a href="https://github.com/jatinjalpeshshah">GitHub</a> &nbsp;•&nbsp;
+    <a href="https://www.linkedin.com/in/jatinjalpeshshah/">LinkedIn</a> &nbsp;•&nbsp;
+    <a href="https://ijsrst.com/IJSRST2613948">Research Publication</a> &nbsp;•&nbsp;
+    <a href="./docs/Jatin_Jalpesh_Shah_Resume.pdf">Resume</a> &nbsp;•&nbsp;
+    <a href="mailto:224jatin2006@gmail.com">Email</a>
+  </b>
+  <br><br>
+</div>
+
+<br>
+
+---
+
+<br>
+
+<div align="center">
+  <p>Designed & Engineered by</p>
+  <h3>Jatin Jalpesh Shah</h3>
+  <p><b>Cybersecurity Engineer • AI Security Researcher</b></p>
+  <p>Research • Security Engineering • Artificial Intelligence</p>
+  <p><i>Built using the Vanguard OS Design System</i></p>
 </div>

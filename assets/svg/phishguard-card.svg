@@ -1,0 +1,406 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="100%" height="100%">
+  <defs>
+    <!-- Background Patterns -->
+    <pattern id="dot-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="rgba(59, 130, 246, 0.15)"/>
+    </pattern>
+    <pattern id="hex-grid" width="52" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 26 0 L 52 15 L 52 45 L 26 60 L 0 45 L 0 15 Z" fill="none" stroke="rgba(59, 130, 246, 0.04)" stroke-width="1"/>
+    </pattern>
+    
+    <!-- Gradients & Filters -->
+    <radialGradient id="radar-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(16, 185, 129, 0.04)" />
+      <stop offset="100%" stop-color="rgba(10, 14, 18, 0)" />
+    </radialGradient>
+    <linearGradient id="scan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(59, 130, 246, 0)" />
+      <stop offset="50%" stop-color="rgba(59, 130, 246, 0.1)" />
+      <stop offset="100%" stop-color="rgba(59, 130, 246, 0)" />
+    </linearGradient>
+    
+    <filter id="shadow-md" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="shadow-sm" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+
+    <style>
+      .bg { fill: #080C11; }
+      
+      /* Typography */
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .font-mono { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; }
+      
+      /* UI Elements */
+      .panel-primary { fill: #0A0F19; stroke: #1E293B; }
+      .panel-glass { fill: rgba(255, 255, 255, 0.03); stroke: rgba(59, 130, 246, 0.15); }
+      .chip-bg { fill: rgba(15, 23, 42, 0.6); stroke: #1E293B; }
+      
+      /* Animations */
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+      .a-normal { animation: pulse 2.5s ease-in-out infinite; }
+      
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+      .a-fast { animation: blink 1s step-end infinite; }
+      
+      @keyframes scan { 0% { transform: translateY(-100%); } 100% { transform: translateY(540px); } }
+      .a-slow { animation: scan 8s linear infinite; }
+      
+      @keyframes gridDrift { 0% { transform: translate(0, 0); } 100% { transform: translate(-30px, -30px); } }
+      .a-background { animation: gridDrift 20s linear infinite; }
+      
+      @keyframes radarSweep { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      .a-radar { animation: radarSweep 10s linear infinite; transform-origin: center; }
+    </style>
+  </defs>
+
+  <!-- ================= BACKGROUND ================= -->
+  <rect class="bg" width="100%" height="100%" />
+  
+  <g class="a-background" opacity="0.8">
+    <rect width="1200" height="700" fill="url(#dot-grid)" x="-100" y="-100" />
+    <rect width="1200" height="700" fill="url(#hex-grid)" x="-100" y="-100" />
+  </g>
+  
+  <g transform="translate(750, 200)">
+    <circle cx="0" cy="0" r="300" fill="url(#radar-glow)" />
+    <circle cx="0" cy="0" r="100" fill="none" stroke="rgba(16, 185, 129, 0.1)" stroke-width="1" stroke-dasharray="4 4" />
+    <circle cx="0" cy="0" r="200" fill="none" stroke="rgba(16, 185, 129, 0.05)" stroke-width="1" />
+    <path d="M 0 0 L 0 -250 A 250 250 0 0 1 250 0 Z" fill="rgba(16, 185, 129, 0.03)" class="a-radar" />
+  </g>
+  
+  <rect width="100%" height="100%" fill="url(#scan)" class="a-slow" />
+
+  <!-- ================= HEADER & TAGLINE ================= -->
+  <g transform="translate(30, 30)" class="font-sans">
+    <!-- Status Badge -->
+    <rect x="0" y="0" width="60" height="20" rx="3" fill="rgba(245, 158, 11, 0.1)" stroke="#F59E0B" />
+    <text x="30" y="14" font-size="10px" font-weight="bold" fill="#F59E0B" text-anchor="middle" class="a-fast">ONGOING</text>
+    
+    <!-- Title -->
+    <text x="75" y="16" font-size="20px" font-weight="800" fill="#F8FAFC" letter-spacing="1px">PHISHGUARD</text>
+    <!-- Version -->
+    <text x="225" y="16" font-size="12px" font-weight="600" fill="#38BDF8">v2.x</text>
+    
+    <!-- Platform Type -->
+    <text x="940" y="16" font-size="12px" font-weight="600" fill="#64748B" text-anchor="end" class="font-mono">AI PHISHING DETECTION PLATFORM</text>
+    
+    <!-- Tagline -->
+    <text x="0" y="45" font-size="12px" font-weight="600" fill="#94A3B8" letter-spacing="1px">
+      LAYERED URL ANALYSIS <tspan fill="#38BDF8">|</tspan> MACHINE LEARNING DETECTION <tspan fill="#38BDF8">|</tspan> THREAT INTELLIGENCE <tspan fill="#38BDF8">|</tspan> EXPLAINABLE SECURITY
+    </text>
+  </g>
+
+  <!-- ================= MAIN DASHBOARD PREVIEW ================= -->
+  <g transform="translate(30, 95)" filter="url(#shadow-md)">
+    <!-- Main Window -->
+    <rect width="600" height="230" class="panel-primary" rx="8" />
+    
+    <!-- Title Bar -->
+    <path d="M 0 30 L 600 30" stroke="#1E293B" stroke-width="1" />
+    <circle cx="15" cy="15" r="4" fill="#EF4444" />
+    <circle cx="28" cy="15" r="4" fill="#F59E0B" />
+    <circle cx="41" cy="15" r="4" fill="#10B981" />
+    <text x="60" y="19" font-size="10px" fill="#64748B" class="font-mono">127.0.0.1 : 8443 / PHISHGUARD_ANALYZER</text>
+    
+    <!-- Left Sidebar -->
+    <path d="M 50 30 L 50 230" stroke="#1E293B" stroke-width="1" />
+    <rect x="15" y="45" width="20" height="20" rx="4" fill="rgba(59, 130, 246, 0.15)" stroke="#38BDF8" />
+    <circle cx="25" cy="85" r="8" fill="none" stroke="#64748B" stroke-width="1.5" />
+    <circle cx="25" cy="115" r="8" fill="none" stroke="#64748B" stroke-width="1.5" />
+    <circle cx="25" cy="145" r="8" fill="none" stroke="#64748B" stroke-width="1.5" />
+    
+    <!-- Content Area (Analysis Pipeline) -->
+    <g transform="translate(70, 45)" class="font-sans">
+      
+      <!-- Target URL Input -->
+      <g transform="translate(25, 0)">
+        <rect width="480" height="36" rx="4" fill="#0F172A" stroke="#334155" />
+        <text x="15" y="23" font-size="10px" fill="#64748B" font-weight="bold">ANALYSIS REQUEST :</text>
+        <text x="125" y="23" font-size="11px" fill="#F8FAFC" class="font-mono">
+          https://paypa<tspan fill="#EF4444" font-weight="bold">I</tspan>-secure-login.com
+        </text>
+        <!-- Activity indicator -->
+        <circle cx="460" cy="18" r="4" fill="#38BDF8">
+           <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.1; 0.6; 0.65; 1" dur="10s" repeatCount="indefinite" />
+        </circle>
+        
+        <!-- Animated Scan Line -->
+        <rect x="0" y="0" width="2" height="36" fill="#38BDF8" opacity="0">
+          <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.1; 0.6; 0.65; 1" dur="10s" repeatCount="indefinite" />
+          <animate attributeName="x" values="0; 480; 480; 0" keyTimes="0; 0.6; 0.99; 1" dur="10s" repeatCount="indefinite" />
+        </rect>
+      </g>
+
+      <!-- Connecting Pipeline Track -->
+      <path d="M 105 76 L 125 76 M 205 76 L 225 76 M 305 76 L 325 76 M 405 76 L 425 76" stroke="#1E293B" stroke-width="2" stroke-dasharray="4 4" fill="none" />
+      <path d="M 105 76 L 125 76 M 205 76 L 225 76 M 305 76 L 325 76 M 405 76 L 425 76" stroke="#38BDF8" stroke-width="2" stroke-dasharray="4 4" fill="none" opacity="0">
+         <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.1; 0.6; 0.65; 1" dur="10s" repeatCount="indefinite" />
+         <animate attributeName="stroke-dashoffset" values="24; 0" dur="1s" repeatCount="indefinite" />
+      </path>
+
+      <!-- 1. Rule Engine -->
+      <g transform="translate(25, 56)">
+        <rect width="80" height="40" rx="4" fill="rgba(59, 130, 246, 0.05)" stroke="#1E293B" />
+        <text x="40" y="24" font-size="10px" font-weight="600" fill="#94A3B8" text-anchor="middle">Rule Engine</text>
+        <g opacity="0">
+          <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.1; 0.2; 0.22; 1" dur="10s" repeatCount="indefinite" />
+          <rect width="80" height="40" rx="4" fill="rgba(59, 130, 246, 0.2)" stroke="#38BDF8" />
+          <text x="40" y="24" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Rule Engine</text>
+        </g>
+      </g>
+
+      <!-- 2. Machine Learning -->
+      <g transform="translate(125, 56)">
+        <rect width="80" height="40" rx="4" fill="rgba(59, 130, 246, 0.05)" stroke="#1E293B" />
+        <text x="40" y="24" font-size="10px" font-weight="600" fill="#94A3B8" text-anchor="middle">ML Models</text>
+        <g opacity="0">
+          <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.2; 0.3; 0.32; 1" dur="10s" repeatCount="indefinite" />
+          <rect width="80" height="40" rx="4" fill="rgba(59, 130, 246, 0.2)" stroke="#38BDF8" />
+          <text x="40" y="24" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">ML Models</text>
+        </g>
+      </g>
+
+      <!-- 3. Threat Intelligence -->
+      <g transform="translate(225, 56)">
+        <rect width="80" height="40" rx="4" fill="rgba(59, 130, 246, 0.05)" stroke="#1E293B" />
+        <text x="40" y="24" font-size="10px" font-weight="600" fill="#94A3B8" text-anchor="middle">Threat Intel</text>
+        <g opacity="0">
+          <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.3; 0.4; 0.42; 1" dur="10s" repeatCount="indefinite" />
+          <rect width="80" height="40" rx="4" fill="rgba(59, 130, 246, 0.2)" stroke="#38BDF8" />
+          <text x="40" y="24" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Threat Intel</text>
+        </g>
+      </g>
+
+      <!-- 4. Brand Analysis -->
+      <g transform="translate(325, 56)">
+        <rect width="80" height="40" rx="4" fill="rgba(59, 130, 246, 0.05)" stroke="#1E293B" />
+        <text x="40" y="24" font-size="10px" font-weight="600" fill="#94A3B8" text-anchor="middle">Brand NLP</text>
+        <g opacity="0">
+          <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.4; 0.5; 0.52; 1" dur="10s" repeatCount="indefinite" />
+          <rect width="80" height="40" rx="4" fill="rgba(59, 130, 246, 0.2)" stroke="#38BDF8" />
+          <text x="40" y="24" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Brand NLP</text>
+        </g>
+      </g>
+
+      <!-- 5. Decision Engine -->
+      <g transform="translate(425, 56)">
+        <rect width="80" height="40" rx="4" fill="rgba(59, 130, 246, 0.05)" stroke="#1E293B" />
+        <text x="40" y="24" font-size="10px" font-weight="600" fill="#94A3B8" text-anchor="middle">Decision AI</text>
+        <g opacity="0">
+          <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.5; 0.6; 0.62; 1" dur="10s" repeatCount="indefinite" />
+          <rect width="80" height="40" rx="4" fill="rgba(59, 130, 246, 0.2)" stroke="#38BDF8" />
+          <text x="40" y="24" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Decision AI</text>
+        </g>
+      </g>
+
+      <!-- Final Verdict Box -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.65; 0.68; 0.93; 0.95; 1" dur="10s" repeatCount="indefinite" />
+        
+        <rect x="25" y="125" width="480" height="40" rx="4" fill="rgba(239, 68, 68, 0.1)" stroke="#EF4444" stroke-width="1.5" />
+        
+        <!-- Red alert pulse ring -->
+        <rect x="25" y="125" width="480" height="40" rx="4" fill="none" stroke="#EF4444" stroke-width="3" opacity="0.4">
+           <animate attributeName="opacity" values="0.1; 0.6; 0.1" dur="1s" repeatCount="indefinite" />
+        </rect>
+
+        <!-- MALICIOUS Badge -->
+        <rect x="40" y="135" width="80" height="20" rx="3" fill="#EF4444" />
+        <text x="80" y="149" font-size="10px" font-weight="bold" fill="#0A0F19" text-anchor="middle">MALICIOUS</text>
+        
+        <!-- Details -->
+        <text x="140" y="149" font-size="11px" fill="#F8FAFC">Threat Level: <tspan fill="#EF4444" font-weight="bold" class="a-fast">CRITICAL</tspan></text>
+        
+        <text x="270" y="149" font-size="11px" fill="#F8FAFC">Risk Score: <tspan fill="#EF4444" font-weight="bold">96%</tspan></text>
+        
+        <!-- Progress Bar for Score -->
+        <rect x="360" y="141" width="120" height="8" rx="4" fill="rgba(255,255,255,0.1)" />
+        <rect x="360" y="141" width="115" height="8" rx="4" fill="#EF4444" />
+      </g>
+
+    </g>
+  </g>
+
+  <!-- ================= METRICS & FEATURE GRID ================= -->
+  <g transform="translate(650, 95)" class="font-sans">
+    
+    <!-- Platform Overview Container -->
+    <rect width="320" height="60" class="panel-glass" filter="url(#shadow-sm)" rx="6" />
+    <rect x="0" y="0" width="3" height="60" fill="#38BDF8" rx="1.5" />
+    <text x="15" y="22" font-size="10px" font-weight="700" fill="#64748B" letter-spacing="1px">PLATFORM OVERVIEW</text>
+    <text x="15" y="44" font-size="14px" font-weight="700" fill="#F8FAFC">Explainable AI <tspan fill="#475569" font-weight="400">|</tspan> Real-Time Analysis</text>
+    
+    <!-- Mini Metrics Row -->
+    <g transform="translate(0, 75)">
+      <g transform="translate(0, 0)">
+        <rect width="100" height="50" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <text x="10" y="20" font-size="9px" font-weight="700" fill="#64748B" letter-spacing="1px">LAYERS</text>
+        <text x="10" y="40" font-size="16px" font-weight="800" fill="#F8FAFC" class="font-mono">05</text>
+      </g>
+      <g transform="translate(110, 0)">
+        <rect width="100" height="50" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <text x="10" y="20" font-size="9px" font-weight="700" fill="#64748B" letter-spacing="1px">SOURCES</text>
+        <text x="10" y="40" font-size="16px" font-weight="800" fill="#F8FAFC" class="font-mono">14</text>
+      </g>
+      <g transform="translate(220, 0)">
+        <rect width="100" height="50" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <text x="10" y="20" font-size="9px" font-weight="700" fill="#64748B" letter-spacing="1px">ACCURACY</text>
+        <text x="10" y="40" font-size="16px" font-weight="800" fill="#10B981" class="font-mono">99%</text>
+      </g>
+    </g>
+
+    <!-- Feature Grid 2x2 -->
+    <g transform="translate(0, 140)">
+      <!-- Rule-Based -->
+      <g transform="translate(0, 0)">
+        <rect width="155" height="40" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <circle cx="15" cy="20" r="4" fill="#38BDF8" />
+        <text x="28" y="18" font-size="11px" font-weight="700" fill="#F8FAFC">Rule Engine</text>
+        <text x="28" y="30" font-size="10px" fill="#94A3B8">Heuristic scanning</text>
+      </g>
+      <!-- ML -->
+      <g transform="translate(165, 0)">
+        <rect width="155" height="40" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <circle cx="15" cy="20" r="4" fill="#38BDF8" class="a-normal" />
+        <text x="28" y="18" font-size="11px" font-weight="700" fill="#F8FAFC">Machine Learning</text>
+        <text x="28" y="30" font-size="10px" fill="#94A3B8">NLP &amp; feature extraction</text>
+      </g>
+      <!-- Threat Intel -->
+      <g transform="translate(0, 50)">
+        <rect width="155" height="40" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <circle cx="15" cy="20" r="4" fill="#10B981" />
+        <text x="28" y="18" font-size="11px" font-weight="700" fill="#F8FAFC">Threat Intelligence</text>
+        <text x="28" y="30" font-size="10px" fill="#94A3B8">Live global blocklists</text>
+      </g>
+      <!-- Explainable -->
+      <g transform="translate(165, 50)">
+        <rect width="155" height="40" class="panel-glass" filter="url(#shadow-sm)" rx="4" />
+        <circle cx="15" cy="20" r="4" fill="#F59E0B" />
+        <text x="28" y="18" font-size="11px" font-weight="700" fill="#F8FAFC">Explainable AI</text>
+        <text x="28" y="30" font-size="10px" fill="#94A3B8">Detailed security reports</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= ANALYTICS STRIP ================= -->
+  <g transform="translate(30, 345)" class="font-sans">
+    <rect width="940" height="70" class="panel-primary" filter="url(#shadow-md)" rx="6" />
+    <text x="15" y="20" font-size="9px" font-weight="800" fill="#64748B" letter-spacing="1.5px">LIVE TELEMETRY</text>
+    
+    <g transform="translate(15, 30)">
+      <!-- URLs Scanned -->
+      <g transform="translate(0, 0)">
+        <rect width="140" height="26" fill="rgba(59, 130, 246, 0.05)" stroke="#1E293B" rx="3" />
+        <text x="10" y="17" font-size="10px" fill="#94A3B8">URLs Scanned</text>
+        <text x="130" y="17" font-size="12px" font-weight="700" fill="#F8FAFC" class="font-mono" text-anchor="end">
+          <animate attributeName="opacity" values="1; 1; 0; 0" keyTimes="0; 0.65; 0.66; 1" dur="10s" repeatCount="indefinite" />
+          842
+        </text>
+        <text x="130" y="17" font-size="12px" font-weight="700" fill="#F8FAFC" class="font-mono" text-anchor="end" opacity="0">
+          <animate attributeName="opacity" values="0; 0; 1; 1" keyTimes="0; 0.65; 0.66; 1" dur="10s" repeatCount="indefinite" />
+          843
+        </text>
+      </g>
+      <!-- Threats Detected -->
+      <g transform="translate(155, 0)">
+        <rect width="140" height="26" fill="rgba(239, 68, 68, 0.05)" stroke="#1E293B" rx="3" />
+        <text x="10" y="17" font-size="10px" fill="#94A3B8">Threats</text>
+        <text x="130" y="17" font-size="12px" font-weight="700" fill="#EF4444" class="font-mono" text-anchor="end">
+          <animate attributeName="opacity" values="1; 1; 0; 0" keyTimes="0; 0.65; 0.66; 1" dur="10s" repeatCount="indefinite" />
+          27
+        </text>
+        <text x="130" y="17" font-size="12px" font-weight="700" fill="#EF4444" class="font-mono" text-anchor="end" opacity="0">
+          <animate attributeName="opacity" values="0; 0; 1; 1" keyTimes="0; 0.65; 0.66; 1" dur="10s" repeatCount="indefinite" />
+          28
+        </text>
+      </g>
+      <!-- Safe URLs -->
+      <g transform="translate(310, 0)">
+        <rect width="140" height="26" fill="rgba(16, 185, 129, 0.05)" stroke="#1E293B" rx="3" />
+        <text x="10" y="17" font-size="10px" fill="#94A3B8">Safe URLs</text>
+        <text x="130" y="17" font-size="12px" font-weight="700" fill="#10B981" class="font-mono" text-anchor="end">815</text>
+      </g>
+      <!-- Detection Latency -->
+      <g transform="translate(465, 0)">
+        <rect width="140" height="26" fill="rgba(59, 130, 246, 0.05)" stroke="#1E293B" rx="3" />
+        <text x="10" y="17" font-size="10px" fill="#94A3B8">Avg. Latency</text>
+        <text x="130" y="17" font-size="12px" font-weight="700" fill="#F8FAFC" class="font-mono" text-anchor="end">318ms</text>
+      </g>
+      <!-- Threat Feeds -->
+      <g transform="translate(620, 0)">
+        <rect width="140" height="26" fill="rgba(59, 130, 246, 0.05)" stroke="#1E293B" rx="3" />
+        <text x="10" y="17" font-size="10px" fill="#94A3B8">Threat Feeds</text>
+        <text x="130" y="17" font-size="12px" font-weight="700" fill="#F8FAFC" class="font-mono" text-anchor="end">4 <tspan fill="#10B981" class="a-normal">●</tspan></text>
+      </g>
+      <!-- Active Queue -->
+      <g transform="translate(775, 0)">
+        <rect width="135" height="26" fill="rgba(59, 130, 246, 0.05)" stroke="#1E293B" rx="3" />
+        <text x="10" y="17" font-size="10px" fill="#94A3B8">Active Queue</text>
+        <text x="125" y="17" font-size="12px" font-weight="700" fill="#F8FAFC" class="font-mono" text-anchor="end">
+          <animate attributeName="opacity" values="1; 1; 0; 0; 1; 1" keyTimes="0; 0.65; 0.66; 0.94; 0.95; 1" dur="10s" repeatCount="indefinite" />
+          1
+        </text>
+        <text x="125" y="17" font-size="12px" font-weight="700" fill="#F8FAFC" class="font-mono" text-anchor="end" opacity="0">
+          <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.65; 0.66; 0.94; 0.95; 1" dur="10s" repeatCount="indefinite" />
+          0
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= TECHNOLOGY STACK ================= -->
+  <g transform="translate(30, 435)" class="font-sans">
+    
+    <!-- Column 1: Frontend -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="10" font-size="10px" font-weight="800" fill="#64748B" letter-spacing="1.5px">FRONTEND</text>
+      <rect x="0" y="20" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="36" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Next.js</text>
+      <rect x="0" y="50" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="66" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">React</text>
+      <rect x="0" y="80" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="96" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">TypeScript</text>
+    </g>
+
+    <!-- Column 2: Backend -->
+    <g transform="translate(180, 0)">
+      <text x="0" y="10" font-size="10px" font-weight="800" fill="#64748B" letter-spacing="1.5px">BACKEND</text>
+      <rect x="0" y="20" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="36" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">FastAPI</text>
+      <rect x="0" y="50" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="66" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Python</text>
+    </g>
+
+    <!-- Column 3: Machine Learning -->
+    <g transform="translate(360, 0)">
+      <text x="0" y="10" font-size="10px" font-weight="800" fill="#64748B" letter-spacing="1.5px">MACHINE LEARNING</text>
+      <rect x="0" y="20" width="100" height="24" class="chip-bg" rx="3" />
+      <text x="50" y="36" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Random Forest</text>
+      <rect x="0" y="50" width="100" height="24" class="chip-bg" rx="3" />
+      <text x="50" y="66" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Scikit-learn</text>
+    </g>
+
+    <!-- Column 4: Threat Intelligence -->
+    <g transform="translate(560, 0)">
+      <text x="0" y="10" font-size="10px" font-weight="800" fill="#64748B" letter-spacing="1.5px">THREAT INTEL</text>
+      <rect x="0" y="20" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="36" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">OpenPhish</text>
+      <rect x="0" y="50" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="66" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">PhishTank</text>
+      <rect x="0" y="80" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="96" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">URLHaus</text>
+    </g>
+
+    <!-- Column 5: Platform -->
+    <g transform="translate(760, 0)">
+      <text x="0" y="10" font-size="10px" font-weight="800" fill="#64748B" letter-spacing="1.5px">PLATFORM</text>
+      <rect x="0" y="20" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="36" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">Supabase</text>
+      <rect x="0" y="50" width="80" height="24" class="chip-bg" rx="3" />
+      <text x="40" y="66" font-size="10px" font-weight="600" fill="#F8FAFC" text-anchor="middle">ReportLab</text>
+    </g>
+  </g>
+</svg>
